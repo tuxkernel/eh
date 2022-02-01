@@ -1,13 +1,13 @@
 ## <span style="color:white">José Julián González Osorno. *La trascendencia de lo nimio. El humor como poética en los cuentos de Efrén Hernández*. Universidad Nacional Autónoma de México, Ciudad de México, 2022, 130 pp.</span>
 
-<div align="center">[Leer (versión impresa)](https://tuxkernel.github.io/julian/julian-impress.pdf)</div>
+[Leer (versión impresa)](https://tuxkernel.github.io/julian/julian-impress.pdf)
 
-<div align="center">[Leer (pantalla-día)](https://tuxkernel.github.io/julian/julian-screen-day.pdf)</div>
+[Leer (pantalla-día)](https://tuxkernel.github.io/julian/julian-screen-day.pdf)
 
-<div align="center">[Leer (pantalla-noche)](https://tuxkernel.github.io/julian/julian-screen-night.pdf)</div>
+[Leer (pantalla-noche)](https://tuxkernel.github.io/julian/julian-screen-night.pdf)
 
-<div align="center">[Descargar (versión impresa)](https://github.com/tuxkernel/julian/raw/main/julian-impress.pdf)</div>
+[Descargar (versión impresa)](https://github.com/tuxkernel/julian/raw/main/julian-impress.pdf)
 
-<div align="center">[Descargar (pantalla-día)](https://github.com/tuxkernel/julian/raw/main/julian-screen-day.pdf)</div>
+[Descargar (pantalla-día)](https://github.com/tuxkernel/julian/raw/main/julian-screen-day.pdf)
 
-<div align="center">[Descargar (pantalla-noche)](https://github.com/tuxkernel/julian/raw/main/julian-screen-night.pdf)</div>
+[Descargar (pantalla-noche)](https://github.com/tuxkernel/julian/raw/main/julian-screen-night.pdf)

@@ -8,6 +8,6 @@ José Julián González Osorno. *La trascendencia de los nimio. El humor como po
 
 [Descarga directa (impresión en papel)](https://github.com/tuxkernel/julian/raw/main/julian-impress.pdf)
 
-[Descarga directa (screen-day)](https://github.com/tuxkernel/julian/raw/main/julian-screen-day.pdf)
+[Descarga directa (día)](https://github.com/tuxkernel/julian/raw/main/julian-screen-day.pdf)
 
-[Descarga directa (screen-night)](https://github.com/tuxkernel/julian/raw/main/julian-screen-night.pdf)
+[Descarga directa (noche)](https://github.com/tuxkernel/julian/raw/main/julian-screen-night.pdf)

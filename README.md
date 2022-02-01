@@ -1,5 +1,7 @@
 # José Julián González Osorno. *La trascendencia de lo nimio. El humor como poética en los cuentos de Efrén Hernández*. Universidad Nacional Autónoma de México, Ciudad de México, 2022, 130 pp.
 
+<p align="center">
+
 ## [Leer (versión impresa)](https://tuxkernel.github.io/julian/julian-impress.pdf)
 
 ## [Leer (pantalla-día)](https://tuxkernel.github.io/julian/julian-screen-day.pdf)
@@ -12,3 +14,4 @@
 
 ## [Descargar (pantalla-noche)](https://github.com/tuxkernel/julian/raw/main/julian-screen-night.pdf)
 
+</p>

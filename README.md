@@ -15,7 +15,10 @@
 [Descargar (pantalla-noche)](https://github.com/tuxkernel/julian/raw/main/julian-screen-night.pdf)
 
 <p align="center">
-  <b>Enlaces:</b><br>
   <a href="https://tuxkernel.github.io/julian/julian-impress.pdf">Leer (versión impresa)</a>
-  <br><br>
+  <a href="https://tuxkernel.github.io/julian/julian-screen-day.pdf">Leer (pantalla-día)</a>
+  <a href="https://tuxkernel.github.io/julian/julian-screen-night.pdf">Leer (pantalla-noche)</a>
+  <a href="https://github.com/tuxkernel/julian/raw/main/julian-impress.pdf">Descargar (versión impresa)</a>
+  <a href="https://github.com/tuxkernel/julian/raw/main/julian-screen-day.pdf">Descargar (pantalla-día)</a>
+  <a href="https://github.com/tuxkernel/julian/raw/main/julian-screen-night.pdf">Descargar (pantalla-noche)</a>
 </p>

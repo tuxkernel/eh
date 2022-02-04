@@ -9,3 +9,9 @@ header {
 h1, h2, h3 {
   text-align: center;
 }
+header {
+  background-image: url(/images/endpapers.jpg); /* may need to be adjusted depending on how you build your page */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}

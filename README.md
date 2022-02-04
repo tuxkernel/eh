@@ -14,4 +14,4 @@
 
 ### <center><a href="https://github.com/tuxkernel/julian/raw/main/julian-screen-night.pdf">Descargar (pantalla-noche)</a></center>
 ---
-<center>Última actualizacion: 03-02-22</center>
+<center>Última actualizacion: 03-Febrero-2022</center>

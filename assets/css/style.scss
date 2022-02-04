@@ -9,6 +9,10 @@ header {
 h1, h2, h3 {
   text-align: center;
 }
-header {
-  background: url("https://github.com/tuxkernel/julian/images/endpapers.jpg");
+html { 
+  background: url(images/endpapers.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

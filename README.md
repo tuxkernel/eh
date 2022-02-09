@@ -25,3 +25,5 @@
 ### <center><a href="https://github.com/tuxkernel/julian/raw/main/julian-screen-day.pdf">Descargar (pantalla-día)</a></center>
 
 ### <center><a href="https://github.com/tuxkernel/julian/raw/main/julian-screen-night.pdf">Descargar (pantalla-noche)</a></center>
+
+---

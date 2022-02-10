@@ -20,7 +20,7 @@
 
 ---
 
-### <center>Conservación digital:</center>
+### <span style="color:white">Conservación digital</span>
 
 ### <center><a href="https://tuxkernel.github.io/julian/julian-heritage.pdf">Leer</a></center>
 

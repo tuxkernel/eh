@@ -20,10 +20,10 @@
 
 ---
 
-<center>Conservación Digital:</center>
+### <center>Conservación digital:</center>
 
-### <center><a href="https://tuxkernel.github.io/julian/julian-heritage.pdf">Leer (versión conservación digital)</a></center>
+### <center><a href="https://tuxkernel.github.io/julian/julian-heritage.pdf">Leer</a></center>
 
-### <center><a href="https://github.com/tuxkernel/julian/raw/main/julian-heritage.pdf">Descargar (version conservación digital)</a></center>
+### <center><a href="https://github.com/tuxkernel/julian/raw/main/julian-heritage.pdf">Descargar</a></center>
 
 ---

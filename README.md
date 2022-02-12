@@ -22,8 +22,9 @@
 
 ## <span style="color:white">Conservación digital:</span>
 
-### <center><a href="https://tuxkernel.github.io/julian/julian-legacy.pdf">Leer</a></center>
+### <center><a href="https://tuxkernel.github.io/julian/julian-pdfa-1b.pdf">Leer</a></center>
 
-### <center><a href="https://github.com/tuxkernel/julian/raw/main/julian-legacy.pdf">Descargar</a></center>
+### <center><a href="https://github.com/tuxkernel/julian/raw/main/julian-pdfa-1b.pdf">Descargar</a></center>
 
 ---
+

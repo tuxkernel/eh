@@ -27,7 +27,3 @@
 ### <center><a href="https://github.com/tuxkernel/julian/raw/main/julian-pdfa-1b.pdf">Descargar</a></center>
 
 ---
-
-## Testing
-
-### <center><a href="https://tuxkernel.github.io/julian/arno-doc.pdf">Leer (pantalla-noche)</a></center>

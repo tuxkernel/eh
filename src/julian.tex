@@ -8,8 +8,7 @@
 
 % opciones:
 
-% draft: para ver errores en el margen derecho (borrador)
-% final: errores corregidos (Imprimatur)
+% draft (borrador) y final (Imprimatur)
 
 % CODIFICACIÓN DEL ARCHIVO
 
@@ -17,7 +16,7 @@
 
 % CODIFICACIÓN DE FUENTE
 
-\usepackage[LGR,TS1,T1]{fontenc} % Codificación de fuente
+\usepackage[TS1,T1]{fontenc} % Codificación de fuente
 
 % SÍMBOLOS
 
@@ -118,15 +117,15 @@
 
 % Índice de imágenes (Estilo Robert Bringhurst) con espacios.
 
-\titlecontents{figure}[2.25em]{}%
-{\contentslabel{2.25em}}{}%
-{\hspace{0.5em}{}\hspace{0.5em}{\thecontentspage}}
+%\titlecontents{figure}[2.25em]{}%
+%{\contentslabel{2.25em}}{}%
+%{\hspace{0.5em}{}\hspace{0.5em}{\thecontentspage}}
 
 % Índice de tablas (Estilo Robert Bringhurst) con espacios.
 
-\titlecontents{table}[2.25em]{}%
-{\contentslabel{2.25em}}{}%
-{\hspace{0.5em}{}\hspace{0.5em}{\thecontentspage}}
+%\titlecontents{table}[2.25em]{}%
+%{\contentslabel{2.25em}}{}%
+%{\hspace{0.5em}{}\hspace{0.5em}{\thecontentspage}}
 
 \usepackage[makeindex]{imakeidx} % Índices (analítico, onomástico, etc.)
 
@@ -201,7 +200,7 @@
 
 % MICROTIPOGRAFÍA
 
-\usepackage[all]{nowidow} % Elimina viudas y huérfanas
+\usepackage[defaultlines=3,all]{nowidow} % Elimina viudas y huérfanas
 \usepackage[activate={true,nocompatibility},final=true,babel=true,tracking=true,
 kerning=true,spacing=false,factor=1100,stretch=20,shrink=20]{microtype}
 \SetTracking[no ligatures=q]{encoding=*,shape=sc}{30} % Elimina ligaduras, kerning.
@@ -215,7 +214,7 @@ left=4cm,right=3cm,top=3cm,bottom=3cm]{geometry} % Márgenes (Tamaño carta)
 
 % LAYOUT (HERRAMIENTAS DE DISEÑO)
 
-%\usepackage[grid]{eso-pic} % Cuadrícula
+%\usepackage[grid]{eso-pic} % Cuadrícula.
 %\usepackage{showframe} % Elementos macrotipográficos
 %\usepackage[switch*]{lineno} % Números de líneas en párrafos
 %\linenumbers % Agrega números de lineas. Activar con lineno
@@ -224,43 +223,10 @@ left=4cm,right=3cm,top=3cm,bottom=3cm]{geometry} % Márgenes (Tamaño carta)
 %\linenumbers % Agrega números de lineas. Activar con fnlineno
 %\renewcommand\thelinenumber{\color{blue}\arabic{linenumber}} % Agrega color a las líneas
 \usepackage[normalem]{ulem} % Para tachar palabras. Úsese \xout{text} o \sout{text}
-\usepackage{cancel} % Para el colofón. Úsese \xcancel{text}
 
 % ENCABEZADOS
 
 \usepackage{fancyhdr} % Encabezados personalizados
-%\usepackage[grey,times]{quotchap}
-% Default
-% makeatletter
-%\renewcommand{\@makechapterhead}[1]{\chapterheadstartvskip%
-%  {\size@chapter{\sectfont\raggedleft
-%      {\chapnumfont
-%        \ifnum \c@secnumdepth >\m@ne%
-%        \if@mainmatter\thechapter%
-%        \fi\fi
-%        \par\nobreak}%
-%      {\raggedleft\advance\leftmargin10em\interlinepenalty\@M #1\par}}
-%    \nobreak\chapterheadendvskip}}
-% makeatother
-%\makeatletter
-%\patchcmd{\l@chapter}{\bfseries}{}{}{}
-%\makeatother
-% Quotchap hacking
-%\makeatletter
-%\renewcommand{\@makechapterhead}[1]{\chapterheadstartvskip%
-%  {\size@chapter{\sectfont\raggedleft
-%      {\chapnumfont
-%        \ifnum \c@secnumdepth >\m@ne%
-%        \if@mainmatter\thechapter%
-%        \fi\fi
-%        \par\nobreak}%
-%      {\centering\Large\bfseries\sc\advance\leftmargin10em\interlinepenalty\@M #1\par}}
-%    \nobreak\chapterheadendvskip}}
-%\makeatother
-% Parche
-%\makeatletter
-%\patchcmd{\l@chapter}{\bfseries}{}{}{}
-%\makeatother
 
 % PÁGINA EN BLANCO
 
@@ -278,7 +244,7 @@ left=4cm,right=3cm,top=3cm,bottom=3cm]{geometry} % Márgenes (Tamaño carta)
 % xcolor package issue: incompatible color definition
 \usepackage{soulutf8} % Arreglo para el paquete soul.
 %\sethlcolor{red} % Color rojo para el marca textos.
-\usepackage{qrcode} % Código QR para dirigir a downloads
+\usepackage[pages=some]{background} % Imagenes frente a la página capítulo
 
 % UTILIDADES PARA PDF
 
@@ -286,15 +252,15 @@ left=4cm,right=3cm,top=3cm,bottom=3cm]{geometry} % Márgenes (Tamaño carta)
 
 % PDF para pantalla (Día y noche)
 
-% Color durazno (Noche)
-
-%\definecolor{durazno}{RGB}{255 218 185} % Definimos nuestro color (Durazno, por defecto).
-%\pagecolor{durazno} % Según estudios científicos, el color durazno es el ideal para leer un PDF en pantalla por la noche.
-
 % Color ahuesado (Día)
 
 %\definecolor{ahuesado}{RGB}{255 255 224} % Definimos nuestro color (ahuesado, por defecto).
 %\pagecolor{ahuesado} % Según estudios científicos, el color ahuesado es el ideal para leer un PDF en pantalla por el día.
+
+% Color durazno (Noche)
+
+%\definecolor{durazno}{RGB}{255 218 185} % Definimos nuestro color (Durazno, por defecto).
+%\pagecolor{durazno} % Según estudios científicos, el color durazno es el ideal para leer un PDF en pantalla por la noche.
 
 % METADATOS PDF
 
@@ -379,10 +345,11 @@ pdfcopyright={José Julián González Osorno. Todos los derechos reservados.},
 \pagestyle{empty}
 \null\vfill
 % GITHUB HOSTING
-\noindent Esta tesis está disponible en \faGithub \\
+{
+\noindent\footnotesize Esta tesis está disponible en \faGithub \\
 
-\noindent\textbf{\url{https://tuxkernel.github.io/julian/}}
-%\qrcode[height=3cm]{https://tuxkernel.github.io/julian/}
+\noindent\footnotesize\textbf{\url{https://tuxkernel.github.io/julian/}}
+}
 % DEDICATORIA
 \newpage
 \pagestyle{empty}
@@ -404,8 +371,8 @@ pdfcopyright={José Julián González Osorno. Todos los derechos reservados.},
 \fancyhf{} % Remueve encabezados y pies previos. Necesario sí o sí.
 \fancyhead[RE,LO]{\small\sc agradecimientos} % \small para carta; \footnotesize oficio.
 %\fancyhead[]
-\fancyhead[LE,RO]{\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[LE,RO]{\textlf{\thepage}}
+\renewcommand{\headrulewidth}{0pt}
 \pagenumbering{arabic}
 \setcounter{page}{5}
 \addcontentsline{toc}{chapter}{Agradecimientos}
@@ -463,8 +430,8 @@ Por último, expreso mi gratitud eterna a la Universidad Nacional Autónoma de M
 \fancyhf{} % Remueve los encabezados y pies previos. Necesario sí o sí.
 \fancyhead[RE]{\small\sc el humor como poética en los cuentos de efrén hernández} % \small para carta, \footnotesize para medio oficio.
 \fancyhead[LO]{\small\sc introducción. aproximación a <<tachas>>}
-\fancyhead[RO,LE]{\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[RO,LE]{\textlf{\thepage}}
+\renewcommand{\headrulewidth}{0pt}
 \pagenumbering{arabic}
 \setcounter{page}{11}
 \addcontentsline{toc}{chapter}{Introducción. Aproximación a <<Tachas>>}
@@ -573,13 +540,23 @@ aquello que impide decir la vida amorfa.}
 \end{flushright}
 % CAPÍTULO 1
 \chapter{Risa, vanguardia y cuento hispanoamericano}\label{ch:risa-vanguardia-y-cuento-hispanoamericano}
+\backgroundsetup{
+color=black,
+scale=8,
+hshift=26,
+vshift=28,
+angle=0,
+opacity=.4,
+contents=1
+}
+\BgThispage
 \thispagestyle{empty}
 \pagestyle{fancy}
 \fancyhf{} % Remueve los encabezados y pies previos. Necesario sí o sí.
 \fancyhead[RE]{\small\sc el humor como poética en los cuentos de efrén hernández} % \small para carta; \footnotesize para medio oficio.
 \fancyhead[LO]{\small\sc i \textbullet\ risa, vanguardia y cuento hispanoamericano} % \small para carta; \footnotesize para medio oficio.
-\fancyhead[RO,LE]{\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[RO,LE]{\textlf{\thepage}}
+\renewcommand{\headrulewidth}{0pt}
 \pagenumbering{arabic}
 \setcounter{page}{25}
 \section{Vanguardia y manifestación de la risa}\label{sec:vanguardia-y-manifestacion-de-la-risa}
@@ -590,7 +567,7 @@ Esa revolución se ancla, sobre todo, en un cuestionamiento de la racionalidad c
 \begin{quoting}
 un tipo de producción simbólica que disolvió definitivamente ciertas concepciones heredadas de la segura sociedad decimonónicamente burguesa, al proponer el relativismo de toda producción artística y filosófica como algo propio de una civilización que sabía o había aprendido la historicidad de todo lo construido por el hombre y su eventual caducidad. En cierto modo podría afirmarse que la vanguardia muestra la modificación, o mejor aún, la creación de un nuevo imaginario social.\footnote{Achugar \emph{apud} Hugo J.\,Verani (ed.), \emph{Narrativa vanguardista hispanoamericana}, México, Universidad Nacional Autónoma de México, 1996. p. 13.}
 \end{quoting}
-En este nuevo imaginario social, que toma fuerza principalmente en el París de finales del \textsc{xix}, el escenario hasta entonces reconocido como propio de la actividad artística cambia. Como asienta Bolívar Echeverría en <<De la academia a la bohemia y más allá>>, la figura del artista se desplaza de los talleres de arte institucionales a cafés y cabarets, en los que, como puede advertirse en \emph{Baile en el Moulin de la Galette} de Renoir, <<la vida se libera de su compulsión productivista>>\footnote{Bolívar Echeverría, <<De la academia a la bohemia y más allá>>. \emph{Theoría. Revista del Colegio de Filosofía} 19 (2009), p. 51.} y se acerca al mundo de la fiesta, lo cual simboliza la vuelta del arte a su matriz premoderna. A partir de este desplazamiento, el arte de vanguardia deja atrás la \emph{mímesis de la realidad} y se resuelve en una \emph{mímesis festiva}, que es
+En este nuevo imaginario social, que toma fuerza principalmente en el París de finales del \textsc{xix}, el escenario hasta entonces reconocido como propio de la actividad artística cambia. Como asienta Bolívar Echeverría \xout{en <<De la academia a la bohemia y más allá>>}, la figura del artista se desplaza de los talleres de arte institucionales a cafés y cabarets, en los que, como puede advertirse en \emph{Baile en el Moulin de la Galette} de Renoir, <<la vida se libera de su compulsión productivista>>\footnote{Bolívar Echeverría, <<De la academia a la bohemia y más allá>>. \emph{Theoría. Revista del Colegio de Filosofía} 19 (2009), p. 51.} y se acerca al mundo de la fiesta, lo cual simboliza la vuelta del arte a su matriz premoderna. A partir de este desplazamiento, el arte de vanguardia deja atrás la \emph{mímesis de la realidad} y se resuelve en una \emph{mímesis festiva}, que es
 \begin{quoting}
 una mímesis de segundo grado, que no imita la realidad sino la desrealización festiva de la realidad; una mímesis que no retrata los objetos del mundo de la vida sino la transfiguración por la que ellos pasan cuando se encuentran incluidos en otra mímesis, aquella que la existencia festiva hace del momento extraordinario del modo de ser humano.\footnote{\emph{Ibid.}, p. 55.}
 \end{quoting}
@@ -608,7 +585,7 @@ En ese París finisecular que evoca Minois, el arte no solo estaba impulsado por
 su fuerza nihilista, caótica y destructiva.
 
 Son incontables las veces en que la ruptura de la tradición que instauró la vanguardia se dio a través de la risa, como podemos apreciar en <<Dadá manifiesto sobre el amor débil y el amor amargo>>, de Tristan Tzara (\mbox{1896-1963}), que es una suerte de irónicas instrucciones <<Para hacer un poema dadaísta>>, de una risa cuyo objetivo es la tradición y, en un giro de autoescarnecimiento, el mismo movimiento Dadá.\footnote{Tristan Tzara. \emph{Siete manifiestos Dadá}. México, Tusquets, 2013, p. 50.}
-\section{\texorpdfstring{"?Un escritor de vanguardia u original? Interpretaciones de sus relatos}{¿Un escritor de vanguardia u original? Interpretaciones de sus relatos}}\label{sec:un-escritor-de-vanguardia-u-original-interprestaciones-de-sus-relatos}
+\section{¿Un escritor de vanguardia u original? Interpretaciones de sus relatos}\label{sec:un-escritor-de-vanguardia-u-original-interprestaciones-de-sus-relatos}
 La narrativa de Efrén Hernández ha sido ligada a la vanguardia iberoamericana de los años veinte y principios de los treinta. Esta tesis fue sugerida por John Brushwood, para quien Hernández es un escritor moderno porque <<va desde los experimentos de la época vanguardista hasta la reafirmación de las mismas tendencias en la nueva novela>>.\footnote{John Brushwood, <<Efrén Hernández y la innovación narrativa>>, \emph{Nuevo Texto Crítico}, \textsc{i}, (1988), p. 93.}
 
 En 1995 Franco Bagnouls señaló la aparente paradoja respecto de la pertenencia o no de Hernández a la vanguardia, al preguntarse en Bosquejos: <<¿por qué [Efrén Hernández] parece criticar en sus artículos ciertas formas de lo literario [vanguardistas] que se dan en la narrativa escrita por él?>>.\footnote{Franco, \emph{op. cit.}, p. 25. \hl{Esta cita también está mal. No se ha citado a Franco Bagnouls con anterioridad. Esta cita a qué obra obra corresponde de la bibliografía final. ¿1989? ¿1995? o ¿2008?}} La similitud entre la escritura de Hernández y las vanguardias, según Franco, puede entenderse a la luz de <<una nueva estética presidida por la ruptura con la realidad tangible e inmediata
@@ -669,7 +646,6 @@ mera evocación, en un sustrato cuyo papel se limita a ser el detonante de los
 procesos mentales del narrador>>.\footnote{Franco, \emph{Voces...}, p. 37. \hl{Cita correcta, pero hay que revisar las anteriores de Franco.}} Es el caso del ya mencionado <<Pobre gato>> de César Garizurieta, donde se presenta a un narrador fragmentario y discontinuo, lejano del confiable narrador de la cuentística anterior.
 
 Achugar lo caracteriza como <<ese yo, o sujeto en primera persona, que poetiza la narración no es una construcción sólida y consistente>>.\footnote{Achugar \emph{apud} Verani, p. 24.} Su resquebrajamiento se alía con la dislocación de las coordenadas espacio-temporales y la ruptura de las leyes de causa-efecto tradicionales como una manera de romper y cuestionar la racionalidad burguesa, característico en el cuento vanguardista.\footnote{\emph{Ibid.}, pp. 23-24.}
-
 % BIBLIOGRAFÍA
 \chapter*{Fuentes consultadas}\label{ch:fuentes-consultadas}
 \thispagestyle{empty}
@@ -677,10 +653,10 @@ Achugar lo caracteriza como <<ese yo, o sujeto en primera persona, que poetiza l
 \fancyhf{} % Remueve los encabezados y pies previos. Necesario sí o sí.
 \fancyhead[RE]{\small\sc el humor como poética en los cuentos de efrén hernández} % \small para carta; \footnotesize para medio oficio.
 \fancyhead[LO]{\small\sc fuentes consultadas} % \small para carta; \footnotesize para medio oficio.
-\fancyhead[RO,LE]{\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[RO,LE]{\textlf{\thepage}}
+\renewcommand{\headrulewidth}{0pt}
 \pagenumbering{arabic}
-\setcounter{page}{51}
+\setcounter{page}{37}
 \addcontentsline{toc}{chapter}{Fuentes consultadas}
 \hangpara{1cm}{1}\textsc{Aceves Barajas}, Pascual, <<Vida, consagración y ausencia de Efrén Hernández>>. \emph{El Universal} (2 de marzo, 1958), México, \hl{¿págs?} \phantomsection\label{bib:aceves1958}
 
@@ -816,9 +792,11 @@ Achugar lo caracteriza como <<ese yo, o sujeto en primera persona, que poetiza l
 
 \hangpara{1cm}{1}\rule{1cm}{0.4pt}, \emph{Tachas y otros cuentos}. (pról. Ana García Bergua). Universidad Nacional Autónoma de México, México, 2002, \hl{¿págs?}.\phantomsection\label{bib:hernandez2002}
 
-\hangpara{1cm}{1}\rule{1cm}{0.4pt}, \emph{Obras completas} (ed. y pról. Alejandro Toledo). Fondo de Cultura Económica, México, 2 vols, 2007.\phantomsection\label{bib:hernandez2007}\nota{Según la norma, es mejor poner 2 vols. y así nos evitamos referenciar el numero total de páginas. La bronca es que el vol. 1 salió en 2007 y el vol. 2 en 2012. La norma no dice qué pedo con esto.}
+\hangpara{1cm}{1}\rule{1cm}{0.4pt}, \emph{Obras completas} (ed. y pról. Alejandro Toledo). Fondo de Cultura Económica, México, vol. 1, 2007, \hl{¿págs?}.\phantomsection\label{bib:hernandez2007}
 
-\hangpara{1cm}{1}\textsc{Hernández}, Felisberto, <<El vapor>>, en \emph{La cara de Ana}. Ed. de dominio público, 1930, 20 pp. [En línea]: \url{http://www.creativecommons.uy/wp-content/uploads/2015/01/Felisberto-Hernandez-La-cara-de-Ana.pdf}
+\hangpara{1cm}{1}\rule{1cm}{0.4pt}, \emph{Obras completas} (ed. y pról. Alejandro Toledo). Fondo de Cultura Económica, México, vol. 2, 2012, \hl{¿págs?}.\phantomsection\label{bib:hernandez2012}
+
+\hangpara{1cm}{1}\textsc{Hernández}, Felisberto, <<El vapor>>, en \emph{La cara de Ana}. Ed. de dominio público, 1930, 20 pp. [En línea]: \href{http://www.creativecommons.uy/wp-content/uploads/2015/01/Felisberto-Hernandez-La-cara-de-Ana.pdf}{http://www.creativecommons.uy/wp-content/uploads/2015/01/Felisberto-Hernandez-La-cara-de-Ana.pdf}
 
 \hangpara{1cm}{1}\textsc{Hita}, Arcipreste de, \emph{Libro de buen amor} (ed. José Luis Girón Alconchel). Castalia, Madrid, 1993, \hl{¿págs?}. [Castalia Didáctica].\phantomsection\label{bib:hita1993}
 
@@ -828,73 +806,73 @@ Achugar lo caracteriza como <<ese yo, o sujeto en primera persona, que poetiza l
 
 \hangpara{1cm}{1}\textsc{Juan Manuel}, Don, \emph{El Conde Lucanor o Libro de los enxiemplos del Conde de Lucanor et de Patronio} (ed., introd. y ns. José Manuel Blecua). Castalia, Madrid, 2003, \hl{¿págs?}. [Clásicos Castalia].\phantomsection\label{bib:juanmanuel2003}
 
-\hangpara{1cm}{1}\textsc{Kristeva}, Julia, <<Bajtín, la palabra, el diálogo y la novela>>, en \textsc{Navarro}, Desiderio (sel. y trad.) \emph{Intertextualité. Francia en el origen de un término y el desarrollo de un concepto}, La Habana, Unión Nacional de Escritores y Artistas de Cuba, 1997.\phantomsection\label{bib:kristeva1997}
+\hangpara{1cm}{1}\textsc{Kristeva}, Julia, <<Bajtín, la palabra, el diálogo y la novela>>, en \textsc{Navarro}, Desiderio (sel. y trad.) \emph{Intertextualité. Francia en el origen de un término y el desarrollo de un concepto}. Unión Nacional de Escritores y Artistas de Cuba, La Habana, 1997, \hl{¿págs?}.\phantomsection\label{bib:kristeva1997}
 
-\hangpara{1cm}{1}\emph{La Santa Biblia. Antiguo y Nuevo testamento} (antigua versión de Casiodoro de Reina; revisada por Cipriano Valera), Corea, Sociedades Bíblicas Unidas, 2000.\phantomsection\label{bib:biblia2000}
+\hangpara{1cm}{1}\emph{La Santa Biblia. Antiguo y Nuevo testamento} (antigua versión de Casiodoro de Reina; revisada por Cipriano Valera). Sociedades Bíblicas Unidas, Corea, 2000, \hl{¿págs?}.\phantomsection\label{bib:biblia2000}
 
-\hangpara{1cm}{1}\emph{Lazarillo de Tormes} (ed. de Francisco Rico), Madrid, Cátedra, 2005 (18"a edición).\phantomsection\label{bib:lazarillo2005}
+\hangpara{1cm}{1}\emph{Lazarillo de Tormes} (ed. de Francisco Rico). Cátedra, Madrid, 2005, 18"a ed., \hl{¿págs?}.\phantomsection\label{bib:lazarillo2005}
 
-\hangpara{1cm}{1}\textsc{Leal}, Luis, <<La Revolución Mexicana y el Cuento>>, en \textsc{Carballo}, Manuel; \textsc{Escalante}, Evodio; \textsc{Huerta}, David; \textsc{Patán}, Federico; \textsc{Pavón}, Alfredo; \textsc{Quirarte}, Vicente; \textsc{Trejo Fuentes}, Ignacio; \textsc{Valadés}, Edmundo y \textsc{Zavala}, Lauro, \emph{Paquete: Cuento (La ficción en México)} (ed., pról. y notas de Alfredo Pavón), Tlaxcala, Universidad Autónoma de Tlaxcala"/Universidad Autónoma de Puebla"/Instituto Nacional de Bellas Artes"/Consejo Nacional para la Cultura y las Artes, 1990, pp. 93-117.\phantomsection\label{bib:leal1990a}
+\hangpara{1cm}{1}\textsc{Leal}, Luis, <<La Revolución Mexicana y el Cuento>>, en \textsc{Carballo}, Manuel; \textsc{Escalante}, Evodio \emph{et al.} \emph{Paquete: Cuento (La ficción en México)} (ed., pról. y ns. de Alfredo Pavón). Universidad Autónoma de Tlaxcala"/Universidad Autónoma de Puebla"/Instituto Nacional de Bellas Artes"/Consejo Nacional para la Cultura y las Artes, Tlaxcala, 1990, pp. 93-117.\phantomsection\label{bib:leal1990a}
 
-\hangpara{1cm}{1}--- \emph{Breve historia del cuento mexicano}, México, Universidad Autónoma de Tlaxcala, 1990.\phantomsection\label{bib:leal1990b}
+\hangpara{1cm}{1}\rule{1cm}{0.4pt}, \emph{Breve historia del cuento mexicano}. Universidad Autónoma de Tlaxcala, México, 1990, \hl{¿págs?}.\phantomsection\label{bib:leal1990b}
 
-\hangpara{1cm}{1}\textsc{Lemus}, Rafael, <<Informe>>, en \textsc{Toledo}, Alejandro (comp.), \emph{Dos escritores secretos. Ensayos sobre Efrén Hernández y Francisco Tario}, México, Consejo Nacional para la Cultura y las Artes"/Fondo Editorial Tierra Adentro, núm. 117-118, 2006, pp. 38-69.\phantomsection\label{bib:lemus2006}
+\hangpara{1cm}{1}\textsc{Lemus}, Rafael, <<Informe>>, en \textsc{Toledo}, Alejandro (comp.), \emph{Dos escritores secretos. Ensayos sobre Efrén Hernández y Francisco Tario}. Consejo Nacional para la Cultura y las Artes"/Fondo Editorial Tierra Adentro, México, núm. 117-118, 2006, pp. 38-69.\phantomsection\label{bib:lemus2006}
 
-\hangpara{1cm}{1}\textsc{López Mena}, Sergio, \emph{Los caminos de la creación en Juan Rulfo}, México, Universidad Nacional Autónoma de México, 1993.\phantomsection\label{bib:lopezmena1993}
+\hangpara{1cm}{1}\textsc{López Mena}, Sergio, \emph{Los caminos de la creación en Juan Rulfo}. Universidad Nacional Autónoma de México, México, 1993, \hl{¿págs?}.\phantomsection\label{bib:lopezmena1993}
 
-\hangpara{1cm}{1}\textsc{López Parada}, Esperanza, \emph{Una mirada al sesgo. Literatura hispanoamericana desde los márgenes}, Madrid-Frankfurt, Iberoamericana Vervuert, 1999.\phantomsection\label{bib:lopezparada1999}
+\hangpara{1cm}{1}\textsc{López Parada}, Esperanza, \emph{Una mirada al sesgo. Literatura hispanoamericana desde los márgenes}. Iberoamericana Vervuert, Madrid-Frankfurt, 1999, \hl{¿págs?}.\phantomsection\label{bib:lopezparada1999}
 
-\hangpara{1cm}{1}\textsc{López Portillo y Rojas}, José, <<Reloj sin dueño>>, en \textsc{Menton}, Seymour, \emph{El cuento hispanoamericano, antología crítico-histórica}, México, Fondo de Cultura Económica, 1964.\phantomsection\label{bib:lopezportillo1964}
+\hangpara{1cm}{1}\textsc{López Portillo y Rojas}, José, <<Reloj sin dueño>>, en \textsc{Menton}, Seymour, \emph{El cuento hispanoamericano, antología crítico-histórica}. Fondo de Cultura Económica, México, 1964, \hl{¿págs?}.\phantomsection\label{bib:lopezportillo1964}
 
-\hangpara{1cm}{1}\textsc{Maeterlinck}, Maurice, \emph{La vida de las hormigas} (trad. Agustín Gil Lasierra), Madrid, Edaf, 1978.\phantomsection\label{bib:maeterlinck1978}
+\hangpara{1cm}{1}\textsc{Maeterlinck}, Maurice, \emph{La vida de las hormigas} (trad. Agustín Gil Lasierra). Edaf, Madrid, 1978, \hl{¿págs?}.\phantomsection\label{bib:maeterlinck1978}
 
 \hangpara{1cm}{1}\textsc{Martín Velasco}, Juan (ed.), \emph{La experiencia mística. Estudio interdisciplinar}, Madrid, Trotta, 2004.\phantomsection\label{bib:martin2004}
 
-\hangpara{1cm}{1}\textsc{Mayoral}, José Antonio, \emph{Figuras retóricas}, Madrid, Síntesis, 1994.\phantomsection\label{bib:mayoral1994}
+\hangpara{1cm}{1}\textsc{Mayoral}, José Antonio, \emph{Figuras retóricas}. Síntesis, Madrid, 1994, \hl{¿págs?}.\phantomsection\label{bib:mayoral1994}
 
-\hangpara{1cm}{1}\textsc{Meyer}, Jean, \emph{La Cristiada}, México, Clío, 1997.\phantomsection\label{bib:meyer1997}
+\hangpara{1cm}{1}\textsc{Meyer}, Jean, \emph{La Cristiada}. Clío, México, 1997,  \hl{¿págs?}.\phantomsection\label{bib:meyer1997}
 
-\hangpara{1cm}{1}\textsc{Millán}, Marco Antonio, \emph{La invención de sí mismo} (ed. Daniel González Dueñas y Alejandro Toledo), México, Consejo Nacional para la Cultura y las Artes, 2009.\phantomsection\label{bib:millan2009}
+\hangpara{1cm}{1}\textsc{Millán}, Marco Antonio, \emph{La invención de sí mismo} (ed. Daniel González Dueñas y Alejandro Toledo). Consejo Nacional para la Cultura y las Artes, México, 2009, \hl{¿págs?}.\phantomsection\label{bib:millan2009}
 
-\hangpara{1cm}{1}\textsc{Minois}, George, \emph{Historia de la risa y la burla: del Renacimiento a nuestros días}, México, Universidad Veracruzana"/Ficticia"/Consejo Nacional de Ciencia y Tecnología, 2018.\phantomsection\label{bib:minois2018}
+\hangpara{1cm}{1}\textsc{Minois}, George, \emph{Historia de la risa y la burla: del Renacimiento a nuestros días}. Universidad Veracruzana"/Ficticia"/Consejo Nacional de Ciencia y Tecnología, México, 2018, \hl{¿págs?}.\phantomsection\label{bib:minois2018}
 
-\hangpara{1cm}{1}\textsc{Monges Nicolau}, Graciela, \emph{Efrén Hernández a través de sus personajes} (Tesis de Licenciatura en Letras, Departamento de Letras), México, Universidad Iberoamericana, 1971.\phantomsection\label{bib:monges1971}
+\hangpara{1cm}{1}\textsc{Monges Nicolau}, Graciela, \emph{Efrén Hernández a través de sus personajes}. Universidad Iberoamericana, México, 1971, \hl{¿págs?}, [Tesis de Licenciatura]\phantomsection\label{bib:monges1971}
 
-\hangpara{1cm}{1}\textsc{Munguía Zatarain}, Martha Elena, \emph{Elementos de poética histórica. El cuento hispanoamericano}, México, El Colegio de México, 2002.\phantomsection\label{bib:munguia2002}
+\hangpara{1cm}{1}\textsc{Munguía Zatarain}, Martha Elena, \emph{Elementos de poética histórica. El cuento hispanoamericano}. El Colegio de México, México, 2002, \hl{¿págs?}.\phantomsection\label{bib:munguia2002}
 
-\hangpara{1cm}{1}--- \emph{La risa en la literatura mexicana: apuntes de poética}. México, Iberoamericana Vervuert"/Bonilla Artigas, 2012.\phantomsection\label{bib:munguia2012}
+\hangpara{1cm}{1}\rule{1cm}{0.4pt}, \emph{La risa en la literatura mexicana: apuntes de poética}. Iberoamericana Vervuert"/Bonilla Artigas, México, 2012, \hl{¿págs?}.\phantomsection\label{bib:munguia2012}
 
-\hangpara{1cm}{1}\textsc{Nava}, Gabriela, <<Ventosidades, culos y otros elementos del realismo grotesco en el relato breve (el \emph{Decamerón}, \emph{Los cuentos de Canterbury}, las \emph{Cent nouvelles nouvelles})>> en \emph{Medievalia 45}, 2013, \hl{págs.}\phantomsection\label{bib:nava2013}
+\hangpara{1cm}{1}\textsc{Nava}, Gabriela, <<Ventosidades, culos y otros elementos del realismo grotesco en el relato breve (el \emph{Decamerón}, \emph{Los cuentos de Canterbury}, las \emph{Cent nouvelles nouvelles})>> en \emph{Medievalia 45}, 2013, pp. 62-73. [En línea]: \url{https://revistas-filologicas.unam.mx/medievalia/index.php/mv/article/download/285/326}\phantomsection\label{bib:nava2013}
 
-\hangpara{1cm}{1}\textsc{Neruda}, Pablo, \emph{El libro de las preguntas}, México, Andrés Bello, 1996 (5"a edición).\phantomsection\label{bib:neruda1996}
+\hangpara{1cm}{1}\textsc{Neruda}, Pablo, \emph{El libro de las preguntas}. Andrés Bello, México, 1996 5"a ed., \hl{¿págs?}.\phantomsection\label{bib:neruda1996}
 
-\hangpara{1cm}{1}\textsc{Nietzsche}, Friedrich, \emph{Los filósofos preplatónicos}, Madrid, Trotta, 2003.\phantomsection\label{bib:nietzche2003}
+\hangpara{1cm}{1}\textsc{Nietzsche}, Friedrich, \emph{Los filósofos preplatónicos}. Trotta, Madrid, 2003, \hl{¿págs?}.\phantomsection\label{bib:nietzche2003}
 
-\hangpara{1cm}{1}\textsc{Osorno}, Julián y \textsc{Berdeja}, Juan, \emph{Mirar no es como ver. Ensayos críticos sobre la obra de Efrén Hernández}, México, Universidad Autónoma de Querétaro, 2018.\phantomsection\label{bib:osorno2018}
+\hangpara{1cm}{1}\textsc{Osorno}, Julián y \textsc{Berdeja}, Juan, \emph{Mirar no es como ver. Ensayos críticos sobre la obra de Efrén Hernández}. Universidad Autónoma de Querétaro, México, 2018, \hl{¿págs?}.\phantomsection\label{bib:osorno2018}
 
-\hangpara{1cm}{1}\textsc{Oviedo}, José Miguel, \emph{Antología crítica del cuento hispanoamericano del siglo \textsc{xx} (1920-1980), \textsc{i}. Fundadores e innovadores}, Madrid, Alianza Editorial, 2002.\phantomsection\label{bib:oviedo2002}
+\hangpara{1cm}{1}\textsc{Oviedo}, José Miguel, \emph{Antología crítica del cuento hispanoamericano del siglo \textsc{xx} (1920-1980), \textsc{i}. Fundadores e innovadores}. Alianza Editorial, Madrid, 2002, \hl{¿págs?}.\phantomsection\label{bib:oviedo2002}
 
-\hangpara{1cm}{1}\textsc{Pasquel}, Leonardo, <<Sobre un logro angular>>, en \emph{América 60}, julio, 1949, pp. 114-128.\phantomsection\label{bib:pasquel1949}
+\hangpara{1cm}{1}\textsc{Pasquel}, Leonardo, <<Sobre un logro angular>>, en \emph{América 60} (julio, 1949), pp. 114-128.\phantomsection\label{bib:pasquel1949}
 
-\hangpara{1cm}{1}--- <<Frente a la vida y la muerte de Efrén Hernández>>, en \emph{América 73}, sep\-tiembre-octubre, 1959, pp. 19-20.\phantomsection\label{bib:pasquel1959}
+\hangpara{1cm}{1}\rule{1cm}{0.4pt}, <<Frente a la vida y la muerte de Efrén Hernández>>, en \emph{América 73} (septiembre-octubre, 1959), pp. 19-20.\phantomsection\label{bib:pasquel1959}
 
-\hangpara{1cm}{1}\textsc{Paúl Arranz}, María del Mar, <<Efrén Hernández o el juego cómplice de la literatura>> en \emph{Literatura Mexicana \textsc{v}}, (1994), pp. 91-110.\phantomsection\label{bib:paul1994}
+\hangpara{1cm}{1}\textsc{Paúl Arranz}, María del Mar, <<Efrén Hernández o el juego cómplice de la literatura>> en \emph{Literatura Mexicana}, vol. 5, núm. 1, 1994, pp. 91-110, [En línea]: \url{https://revistas-filologicas.unam.mx/literatura-mexicana/index.php/lm/article/download/1088/1060}\phantomsection\label{bib:paul1994}
 
-\hangpara{1cm}{1}\textsc{Paz}, Octavio, <<Efrén Hernández, Entre apagados muros>>, en \emph{Miscelánea \textsc{i}. Primeros escritos}, t. \textsc{xiii}, México, Fondo de Cultura Económica, 1998.\phantomsection\label{bib:paz1998a}
+\hangpara{1cm}{1}\textsc{Paz}, Octavio, <<Efrén Hernández, Entre apagados muros>>, en \emph{Miscelánea \textsc{i}. Primeros escritos}, t. \textsc{xiii}. Fondo de Cultura Económica, México, 1998, \hl{¿págs?}.\phantomsection\label{bib:paz1998a}
 
-\hangpara{1cm}{1}--- <<Xavier Villaurrutia en persona y en obra>>, en \emph{Miscelánea \textsc{i}. Primeros escritos}, t. \textsc{xiii}, México, Fondo de Cultura Económica, 1998.\phantomsection\label{bib:paz1998b}
+\hangpara{1cm}{1}\rule{1cm}{0.4pt}, <<Xavier Villaurrutia en persona y en obra>>, en \emph{Miscelánea \textsc{i}. Primeros escritos}, t. \textsc{xiii}. Fondo de Cultura Económica, México, 1998, \hl{¿págs?}.\phantomsection\label{bib:paz1998b}
 
-\hangpara{1cm}{1}\textsc{Peña}, Margarita (pról., ed. crítica e índices), \emph{Flores de baria poesía. Cancionero novohispano del siglo \textsc{xvi}}, México, Fondo de Cultura Económica, 2004.\phantomsection\label{bib:peña2004}
+\hangpara{1cm}{1}\textsc{Peña}, Margarita (pról., ed. crítica e índices), \emph{Flores de baria poesía. Cancionero novohispano del siglo \textsc{xvi}}. Fondo de Cultura Económica, México, 2004, \hl{¿págs?}.\phantomsection\label{bib:peña2004}
 
-\hangpara{1cm}{1}\textsc{Pina}, María de (sel. y notas), \emph{Fábulas morales}, México, Porrúa, 1989 (col. <<Sepan cuántos...>>, 15"a edición).\phantomsection\label{bib:pina1989}
+\hangpara{1cm}{1}\textsc{Pina}, María de (sel. y ns), \emph{Fábulas morales}. Porrúa, México, 1989, 15"a ed., \hl{¿págs?} [Sepan cuántos..., \hl{¿núm?} ].\phantomsection\label{bib:pina1989}
 
-\hangpara{1cm}{1}\textsc{Piñero de Piña}, Berta Elena, \emph{Efrén Hernández: el mundo de sus cuentos} (Tesis de maestría), Universidad Veracruzana, 1971.\phantomsection\label{bib:piñero1971}
+\hangpara{1cm}{1}\textsc{Piñero de Piña}, Berta Elena, \emph{Efrén Hernández: el mundo de sus cuentos} (\hl{¿Dir.?}). Universidad Veracruzana, Xalapa, 1971, \hl{¿págs?} [Tesis de maestría].\phantomsection\label{bib:piñero1971}
 
-\hangpara{1cm}{1}\textsc{Prat Ferrer}, Juan José, <<Oralidad y oratura>>, en Fundación Joaquín Díaz. \emph{Literatura popular. Definición y propuesta de bibliografía básica}, Valladolid, diciembre, 2010. Consultado en \guilsinglleft\url{https://funjdiaz.net/imagenes/actas/2010literatura.pdf}\guilsinglright
+\hangpara{1cm}{1}\textsc{Prat Ferrer}, Juan José, <<Oralidad y oratura>>, en Fundación Joaquín Díaz. \emph{Literatura popular. Definición y propuesta de bibliografía básica}. s. e., Valladolid (diciembre, 2010). [En línea]: \url{https://funjdiaz.net/imagenes/actas/2010literatura.pdf}
 
-\hangpara{1cm}{1}\textsc{Pupo-Walker}, Enrique, <<La reconstrucción imaginativa del pasado en \emph{El Carnero} de Rodríguez Freyle>>, en \emph{Nueva revista de filología hispánica}, vol. 27, no. 2, (1978), p. 346-358.\phantomsection\label{bib:pupowalker1978}
+\hangpara{1cm}{1}\textsc{Pupo-Walker}, Enrique, <<La reconstrucción imaginativa del pasado en \emph{El Carnero} de Rodríguez Freyle>>, en \emph{Nueva revista de filología hispánica}, vol. 27, núm. 2, 1978, pp. 346-358.\phantomsection\label{bib:pupowalker1978}
 
-\hangpara{1cm}{1}--- <<La creación narrativa del Nuevo Mundo>>, en Fundación Juan March, 13 al 12 de noviembre, 1992.\phantomsection\label{bib:pupowalker1992}
+\hangpara{1cm}{1}\rule{1cm}{0.4pt}, <<La creación narrativa del Nuevo Mundo>>, en Fundación Juan March (13 al 12 de noviembre, 1992).\phantomsection\label{bib:pupowalker1992}
 
 \hangpara{1cm}{1}\textsc{Richter}, Jean Paul, <<Del humorismo>>, en \emph{Cuadernos de información y comunicación. La comunicación del humor}, 7, (2002), pp. 53-68.\phantomsection\label{bib:richter2002}
 
@@ -950,16 +928,16 @@ Achugar lo caracteriza como <<ese yo, o sujeto en primera persona, que poetiza l
 \pdfbookmark{Colofón}{contents}
 \hspace*{0pt}
 \vfill
-\begin{center}
-\includegraphics[width=2cm]{03} % 2cm para carta, 1.5cm para medio oficio.
-\end{center}
+%\begin{center}
+%\includegraphics[width=2cm]{03} % 2cm para carta, 1.5cm para medio oficio.
+%\end{center}
 % \small para carta, \footnotesize para medio oficio.
-{\footnotesize\squarepar{\emph{La trascendencia de lo nimio. El humor como poética en los cuentos de Efrén Hernández} de José Julián González Osorno, se terminó de maquetar en calle Cerrada de Colima núm. 7301, col. Universidades, Heroica Puebla de Zaragoza (México). El manuscrito se capturó con el editor de texto plano \TeX{}maker (5.0.3) y se diagramó en el sistema de composición tipográfico \LaTeX{} desarrollado por Leslie Lamport, basado en el lenguaje de programación \TeX{} creado por Donald E.\,Knuth; el archivo fuente fue compilado mediante el motor de tipografías \hologo{pdfTeX} desarrollado por \hologo{HanTheThanh}. En su composición se empleó tipografía Cochineal, \emph{bifurcación} de Crimson de Sebastian Kosch realizada por Michael Sharpe. Las imágenes se manipularon en \textsc{gimp} (2.10.22); la portada se diseñó en LibreOffice Draw (7.3.0.3). Disposición tipográfica realizada para papel \emph{Bond} tamaño carta de 90\,gr. Diseño y formación:}}
+{\footnotesize\squarepar{\emph{La trascendencia de lo nimio. El humor como poética en los cuentos de Efrén Hernández} de José Julián González Osorno, se terminó de maquetar en Cerrada de Colima núm. 7301, col. Universidades, Heroica Puebla de Zaragoza (México). El manuscrito se capturó con el editor de texto plano \TeX{}maker (5.0.3) y se diagramó en el sistema de composición tipográfico \LaTeX{} desarrollado por Leslie Lamport, basado en el lenguaje de programación \TeX{} creado por Donald E.\,Knuth; el archivo fuente fue compilado mediante el motor de tipografías \hologo{pdfTeX} desarrollado por \hologo{HanTheThanh}. En su composición se empleó tipografía Cochineal, \emph{fork} de Crimson de Sebastian Kosch realizada por Michael Sharpe. Las imágenes se manipularon en \textsc{gimp} (2.10.22); la portada se diseñó en LibreOffice Draw (7.3.0.3). Disposición tipográfica realizada para papel \emph{Bond} tamaño carta de 90\,gr. Diseño y formación:}}
 \begin{center}
-\textcalligra{\href{mailto:muxkernel@gmail.com}{Tuxkernel}}
+\small\textcalligra{\href{muxkernel@gmail.com}{Tuxkernel}}
 \end{center}
 %\begin{center}
-%\qrcode{https://tuxkernel.github.io/julian/}
+%\Bart
 %\end{center}
 \vfill
 % PÁGINA EN BLANCO

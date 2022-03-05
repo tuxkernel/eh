@@ -41,7 +41,6 @@
 \usepackage[sups]{cochineal} % version 1.076
 \useosf
 \useproportional
-\usepackage[cochineal]{newtxmath}
 
 % Opciones:
 
@@ -204,8 +203,8 @@
 \usepackage[activate={true,nocompatibility},final=true,babel=true,tracking=true,
 kerning=true,spacing=false,factor=1100,stretch=20,shrink=20]{microtype}
 \SetTracking[no ligatures=q]{encoding=*,shape=sc}{30} % Elimina ligaduras, kerning.
-\DeclareMicrotypeSet*{smallcapsi} % Kerning versalitas itálicas
-{encoding={TS1,T1},shape={sc*,si,scit}}
+%\DeclareMicrotypeSet*{smallcapsi} % Kerning versalitas itálicas
+%{encoding={TS1,T1},shape={sc*,si,scit}}
 
 % DISPOSICIÓN TIPOGRÁFICA
 
@@ -214,7 +213,7 @@ left=4cm,right=3cm,top=3cm,bottom=3cm]{geometry} % Márgenes (Tamaño carta)
 
 % LAYOUT (HERRAMIENTAS DE DISEÑO)
 
-%\usepackage[grid]{eso-pic} % Cuadrícula.
+\usepackage{eso-pic} % Cuadrícula. La opción "grid" agrega una cuadrícula.
 %\usepackage{showframe} % Elementos macrotipográficos
 %\usepackage[switch*]{lineno} % Números de líneas en párrafos
 %\linenumbers % Agrega números de lineas. Activar con lineno
@@ -245,6 +244,7 @@ left=4cm,right=3cm,top=3cm,bottom=3cm]{geometry} % Márgenes (Tamaño carta)
 \usepackage{soulutf8} % Arreglo para el paquete soul.
 %\sethlcolor{red} % Color rojo para el marca textos.
 \usepackage[pages=some]{background} % Imagenes frente a la página capítulo
+\usepackage{transparent} % Agrega transparencia a las imagenes
 
 % UTILIDADES PARA PDF
 
@@ -294,67 +294,24 @@ pdfcopyright={José Julián González Osorno. Todos los derechos reservados.},
 \raggedbottom % Reduce los espacios en blanco en cada hoja y los envía al final.
 %\flushbottom % Distribuye los espacios en blanco en cada hoja de forma aleatoria.
 \begin{document}
-\pagenumbering{arabic} % Números de página (arábigos).
-\setcounter{page}{1} % Página 1
-\parindent=5mm % Sangría para todo el documento
-\parskip=0mm % Espacio entre párrafos. Por defecto lo dejamos en 0mm.
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\parindent=5mm % Sangría.
+\parskip=0mm % Espacio entre párrafos.
 \newcommand{\nota}[1]{\marginpar{\color{blue}\tiny #1}} % Nota al margen
 % PORTADA
 \newpage
 \pagestyle{empty}
 \pdfbookmark{Portada}{Portada}
 \includepdf[noautoscale]{Portada}
-%\begin{center}
-%\includegraphics[width=3cm]{01} % 3cm para carta, 2cm para medio oficio
-%\end{center}
-%{\centering\biolinum
-%Universidad Nacional Autónoma de México
-%\vfill
-%Programa de Maestría y Doctorado en Letras
-%\vfill
-%{\large\emph{La transcendencia de lo nimio. El humor como poética en los cuentos de Efrén Hernández}}
-%\vfill
-%\textsc{Tesis}
-%\vfill
-%que para optar por el grado de
-%\vfill
-%\textsc{Doctor en Letras}
-%\vfill
-%Presenta:
-%\vfill
-%\textsc{José Julián González Osorno}
-%\vfill
-%Director de tesis:
-%\vfill
-%\textsc{Dra. Yanna Celina Hadatty Mora} \\
-%(Instituto de Investigaciones Filológicas, \textsc{unam})
-%\vfill
-%Comité tutoral:
-%\vfill
-%\textsc{Dra. Georgina García Gutiérrez Vélez} \\
-%(Instituto de Investigaciones Filológicas, \textsc{unam})
-%\vfill
-%\textsc{Dra. María Raquel Mosqueda Rivera} \\
-%(Instituto de Investigaciones Filológicas, \textsc{unam})
-%\begin{center}
-%Ciudad de México, \hl{Septiembre}, 2021
-%\end{center}
-%}
 % PÁGINA EN BLANCO
 \newpage
 \pagestyle{empty}
 \null\vfill
-% GITHUB HOSTING
-{
-\noindent\footnotesize Esta tesis está disponible en \faGithub \\
-
-\noindent\footnotesize\textbf{\url{https://tuxkernel.github.io/julian/}}
-}
 % DEDICATORIA
 \newpage
 \pagestyle{empty}
 \pdfbookmark{Dedicatoria}{Dedicatoria}
-\hspace*{0pt}
 \vspace*{42pt}
 % \ding{166} <--- Hoja (pifont)
 \begin{flushright}
@@ -363,14 +320,12 @@ pdfcopyright={José Julián González Osorno. Todos los derechos reservados.},
 % PÁGINA EN BLANCO
 \newpage
 \pagestyle{empty}
-\null\vfill
 % AGRADECIMIENTOS
 \chapter*{Agradecimientos}\label{ch:agradecimientos}
 \thispagestyle{empty}
 \pagestyle{fancy}
 \fancyhf{} % Remueve encabezados y pies previos. Necesario sí o sí.
-\fancyhead[RE,LO]{\small\sc agradecimientos} % \small para carta; \footnotesize oficio.
-%\fancyhead[]
+\fancyhead[RE,LO]{\small\sc agradecimientos}
 \fancyhead[LE,RO]{\textlf{\thepage}}
 \renewcommand{\headrulewidth}{0pt}
 \pagenumbering{arabic}
@@ -386,9 +341,8 @@ Gracias a Víctor González Osorno e Iván González Osorno, mis hermanos, por s
 
 Por último, expreso mi gratitud eterna a la Universidad Nacional Autónoma de México (\textsc{unam}). Ser un alumno de esta institución es un orgullo y una alta responsabilidad; al Consejo Nacional de Ciencia y Tecnología (\textsc{conacyt}), por brindarme una beca para realizar este trabajo durante el periodo 2007-2011; y, finalmente, agradezco a los investigadores y profesores de la maestría en Literatura Mexicana de la Universidad Veracruzana (\textsc{uv}), quienes, con sus enseñanzas, hicieron posible que yo fuese un alumno de esta prestigiosa universidad, la \textsc{unam}.
 % CONTENIDO
-% Remueve los puntos en los índices
 \makeatletter
-\renewcommand\@dotsep{200}
+\renewcommand\@dotsep{200} % Remueve los puntos en los índices
 \makeatother
 \renewcommand{\contentsname}{Contenidos}
 \tableofcontents
@@ -411,7 +365,7 @@ Por último, expreso mi gratitud eterna a la Universidad Nacional Autónoma de M
 \pagestyle{empty}
 \vspace*{42pt}
 \begin{flushright}
-\begin{minipage}{7.5cm} % 7.5cm para carta; 6cm para medio oficio.
+\begin{minipage}{7.5cm}
 \emph{Efrén Hernández era capaz de orientar rumbos literarios, encender palabras y pensamientos.}
 \begin{flushright}
 \textsc{Dolores Castro}
@@ -428,7 +382,7 @@ Por último, expreso mi gratitud eterna a la Universidad Nacional Autónoma de M
 \thispagestyle{empty}
 \pagestyle{fancy}
 \fancyhf{} % Remueve los encabezados y pies previos. Necesario sí o sí.
-\fancyhead[RE]{\small\sc el humor como poética en los cuentos de efrén hernández} % \small para carta, \footnotesize para medio oficio.
+\fancyhead[RE]{\small\sc el humor como poética en los cuentos de efrén hernández}
 \fancyhead[LO]{\small\sc introducción. aproximación a <<tachas>>}
 \fancyhead[RO,LE]{\textlf{\thepage}}
 \renewcommand{\headrulewidth}{0pt}
@@ -444,9 +398,7 @@ Sobre la vida de Efrén Hernández (León, Guanajuato, 1904-Ciudad de México, 1
 Ese desdén hacia la vida universitaria se extendió, asimismo, a los padrinazgos políticos, académicos y culturales, y lo llevó a ejercer los más diversos trabajos para sobrevivir: vendió aretes de plástico, figuritas de yeso, lámparas, libros
 y productos de la Compañía Nacional de Subsistencias Populares (\textsc{conasupo}); fue archivista y electricista. Antes de llegar a la Ciudad de México había sido aprendiz de botica, de zapatero, de platero y dependiente en una tienda de ropa. Durante su etapa en la Ciudad de México, recuerda su hija Valentina Hernández Ponzanelli, llegó incluso a hacerse pasar por <<Inspector de Salubridad>> en los puestos de comida solicitando una muestra para <<verificar>> su estado cuando el hambre arreciaba.\footnote{Esto me contó el poeta Fernando Rodríguez antes de darme la entrevista donde refería que, en ciertas temporadas, Efrén Hernández vendía aretes de plástico, figuritas de yeso y lámparas para sobrevivir. Esta entrevista (más la de Dolores Castro y Juan Bañuelos) puede consultarse en José Julián González Osorno, <<Efrén Hernández a tres voces>>, \emph{Texto Crítico, Nueva Época}, año \textsc{xii}, núm. 24, enero-junio, 2009, pp. \mbox{139-145}; también en Juan M. Berdeja y Julián Osorno, \emph{Mirar no es como ver. Ensayos críticos sobre la obra de Efrén Hernández}, México, Universidad Autónoma de Querétaro, 2018, pp. 209-217. \hl{Las citas están hechas todo un chilaquil. Revisar el aparato crítico con más calma.}} Sus dos empleos mejor pagados quizá fueron el de oficinista en la Secretaría de Educación Pública (\textsc{sep}), junto a Juan Rulfo, y como subdirector de la revista \emph{América}.
 
-Efrén Hernández fue un atento lector de una amplia tradición literaria y filosófica, clásica y moderna.\footnote{Entre estos autores pueden citarse: Cervantes, Santa Teresa, San Juan de la Cruz, Fray Luis de León, Quevedo y Góngora; filósofos como Demócrito, Sócrates, Platón, Plotino, Pascal, Nietzsche y Heidegger. Además de Don Juan Manuel, Shakespeare, Giono, Gracián, Gómez de la Serna, Hamsun
-y Faulkner; y textos como \emph{El Panchatantra} y \emph{Las mil y una noches}. Cfr. Marco Antonio Millán, \emph{La invención de sí mismo} (ed. de Daniel González Dueñas y Alejandro Toledo), México, Consejo Nacional para la Cultura y las Artes, 2009, pp. 75 y 81; <<Efrén Hernández a tres voces>>, art. cit.; Federico S.\,Inclán, <<Carta a un amigo ausente>>, \emph{América. Revista Antológica}, Época Nueva, núm. 73, septiembre-octubre, 1959, p. 15.} Aunque breve, su obra abarca cuento, poesía,\footnote{Sus poemas están contenidos en los libros \emph{Hora de horas} (1936) y \emph{Entre apagados muros} (1943).} teatro,\footnote{Sus obras de teatro son \emph{Adanijob (fragmento)} y \emph{Cederano}, rescatadas por Alejandro Toledo del archivo de Efrén Hernández y publicadas en el tomo \textsc{ii} de las \emph{Obras Completas} (2012).} novela,\footnote{Sus novelas son \emph{Cerrazón sobre Nicómaco. Ficción harto doliente} (1946), \emph{La paloma, el sótano y la torre} (1949), \emph{Abarca. Fragmento de novela} (1949) y \emph{Autos}, descubierta por Alejandro Toledo entre los papeles de Efrén Hernández y publicada en 2007 en el tomo \textsc{i} de las \emph{Obras Completas}.} crítica literaria\footnote{Los ensayos son los comentarios de Efrén acerca de obras de diversos autores, sobre todo
-mexicanos, contemporáneos a él. La mayoría recopilados por primera vez por Franco en \emph{Bosquejos} (1995). \ding{43} \hyperref[bib:franco1995]{Fuentes consultadas}.} y dos guiones para cine, uno para la actriz María Douglas y otro para Cantinflas.\footnote{Alejandro Toledo, <<El guión [\emph{sic}] que Cantinflas no pudo filmar>>, \emph{El Universal}, 7 de agosto, 2011; \emph{Obras \textsc{ii}}, Fondo de Cultura Económica, México, 2012, p. 5. \emph{Videm} <<El ``Tachas'' [\emph{sic}] escribe un asunto para Cantinflas>>, \emph{Prensa Gráfica}. México, 21 de mayo, 1949; <<Cantinflas tiene a su alcance el argumentista que necesitaba>>,  \emph{Ovaciones}. México, 1 de febrero, 1950.} Considerados como obras de teatro en las \emph{Obras completas}, \emph{Casi sin rozar el mundo} (1956) fue escrito para María Douglas y \emph{Dichas y desdichas de Nicócles Méndez; tragiburledia cinematográfica} (1951) para Cantinflas, esta a petición de Andrés Serra Rojas ---entonces director del Banco Nacional Cinematográfico.
+Efrén Hernández fue un atento lector de una amplia tradición literaria y filosófica, clásica y moderna.\footnote{Entre estos autores pueden citarse: Cervantes, Santa Teresa, San Juan de la Cruz, Fray Luis de León, Quevedo y Góngora; filósofos como Demócrito, Sócrates, Platón, Plotino, Pascal, Nietzsche y Heidegger. Además de Don Juan Manuel, Shakespeare, Giono, Gracián, Gómez de la Serna, Hamsun y Faulkner; y textos como \emph{El Panchatantra} y \emph{Las mil y una noches}. Cfr. Marco Antonio Millán, \emph{La invención de sí mismo} (ed. de Daniel González Dueñas y Alejandro Toledo), México, Consejo Nacional para la Cultura y las Artes, 2009, pp. 75 y 81; <<Efrén Hernández a tres voces>>, art. cit.; Federico S.\,Inclán, <<Carta a un amigo ausente>>, \emph{América. Revista Antológica}, Época Nueva, núm. 73, septiembre-octubre, 1959, p. 15.} Aunque breve, su obra abarca cuento, poesía,\footnote{Sus poemas están contenidos en los libros \emph{Hora de horas} (1936) y \emph{Entre apagados muros} (1943).} teatro,\footnote{Sus obras de teatro son \emph{Adanijob (fragmento)} y \emph{Cederano}, rescatadas por Alejandro Toledo del archivo de Efrén Hernández y publicadas en el tomo \textsc{ii} de las \emph{Obras Completas} (2012).} novela,\footnote{Sus novelas son \emph{Cerrazón sobre Nicómaco. Ficción harto doliente} (1946), \emph{La paloma, el sótano y la torre} (1949), \emph{Abarca. Fragmento de novela} (1949) y \emph{Autos}, descubierta por Alejandro Toledo entre los papeles de Efrén Hernández y publicada en 2007 en el tomo \textsc{i} de las \emph{Obras Completas}.} crítica literaria\footnote{Los ensayos son los comentarios de Efrén acerca de obras de diversos autores, sobre todo mexicanos, contemporáneos a él. La mayoría recopilados por primera vez por Franco en \emph{Bosquejos} (1995). \ding{43} \hyperref[bib:franco1995]{Fuentes consultadas}.} y dos guiones para cine, uno para la actriz María Douglas y otro para Cantinflas.\footnote{Alejandro Toledo, <<El guión [\emph{sic}] que Cantinflas no pudo filmar>>, \emph{El Universal}, 7 de agosto, 2011; \emph{Obras \textsc{ii}}, Fondo de Cultura Económica, México, 2012, p. 5. \emph{Videm} <<El ``Tachas'' [\emph{sic}] escribe un asunto para Cantinflas>>, \emph{Prensa Gráfica}. México, 21 de mayo, 1949; <<Cantinflas tiene a su alcance el argumentista que necesitaba>>,  \emph{Ovaciones}. México, 1 de febrero, 1950.} Considerados como obras de teatro en las \emph{Obras completas}, \emph{Casi sin rozar el mundo} (1956) fue escrito para María Douglas y \emph{Dichas y desdichas de Nicócles Méndez; tragiburledia cinematográfica} (1951) para Cantinflas, esta a petición de Andrés Serra Rojas ---entonces director del Banco Nacional Cinematográfico.
 
 Se creía que \emph{Dichas y desdichas de Nicócles Méndez} había sido escrita junto con Dolores Castro, Rosario Castellanos y Marco Antonio Millán; de hecho, se publicó en la revista \emph{América} (núm. 65, abril, 1951) como obra colectiva. No obstante, Dolores Castro le aclaró después a Alejandro Toledo: <<la invitación a participar en ese proyecto fue un acto de generosidad con dos jóvenes ---ella y Rosario Castellanos--- que se iniciaban en el mundo de las letras y con Millán, que era su mejor amigo>>. El texto se puede acreditar <<casi enteramente a Efrén Hernández>>.\footnote{Toledo, loc. cit.} Y en efecto, quienes leyeron esta obra aseguraban que había nacido \emph{el verdadero guionista de Cantinflas}.
 \section*{La revista \emph{América} y el descubrimiento de Juan Rulfo}\label{sec:La-revista-américa-y-el-descubrimiento-de-juan-rulfo}
@@ -479,26 +431,18 @@ Nadie supiera nada acerca de sus inéditos empeños, si yo no, un día, pienso q
 
 Sin mí, lo apunto con satisfacción, <<La Cuesta de las Comadres>>, habría ido a parar al cesto [...].\footnote{Presentación a Juan Rulfo, <<La cuesta de las comadres>>, \emph{América}. México, 29 de febrero, 1948, núm. 55, pp. 31-38.}
 \end{quoting}
-Este impulso a Rulfo ha sido comparado incluso con el papel que desempeñó Max
-Brod con la obra de Kafka.\footnote{Tal como Max Brod hizo con Kafka, apunta Nuria Amat, Hernández rescató a Rulfo del silencio, una generosidad con la palabra de otros escritores que parece hasta insólita en el ámbito literario: <<Lo que hizo en realidad Efrén fue potenciar el estilo personalísimo de su admirado amigo, limpiando
-ripios, limando retóricas, librándolo de verbosidad y barroquismo y contribuyendo como nadie a un gran salto en la carrera de escritor de Rulfo>>. Nuria Amat, \emph{Juan Rulfo, el arte del silencio}, Barcelona, Ediciones Omega, 2003, p. 101 [Vidas Literarias].} En todo caso, Hernández fue para Rulfo, recordaba
-Arreola, \emph{un alma necesaria y oportuna}.\footnote{Entrevista de Elena Poniatowska \emph{apud} García Bonilla, \emph{op. cit.}, p. 113.}
+Este impulso a Rulfo ha sido comparado incluso con el papel que desempeñó Max Brod con la obra de Kafka.\footnote{Tal como Max Brod hizo con Kafka, apunta Nuria Amat, Hernández rescató a Rulfo del silencio, una generosidad con la palabra de otros escritores que parece hasta insólita en el ámbito literario: <<Lo que hizo en realidad Efrén fue potenciar el estilo personalísimo de su admirado amigo, limpiando ripios, limando retóricas, librándolo de verbosidad y barroquismo y contribuyendo como nadie a un gran salto en la carrera de escritor de Rulfo>>. Nuria Amat, \emph{Juan Rulfo, el arte del silencio}, Barcelona, Ediciones Omega, 2003, p. 101 [Vidas Literarias].} En todo caso, Hernández fue para Rulfo, recordaba Arreola, \emph{un alma necesaria y oportuna}.\footnote{Entrevista de Elena Poniatowska \emph{apud} García Bonilla, \emph{op. cit.}, p. 113.}
 
-Por amistad y quizá en gratitud, Rulfo dio a Hernández para \emph{América} siete de
-los diecisiete relatos que luego integrarían \emph{El Llano en llamas}: <<Nos han dado la tierra>> (agosto, 1945), <<Macario>> (1946), <<Es que somos muy pobres>> (agosto, 1947), <<La cuesta de las comadres>> (febrero, 1948), <<Talpa>> (enero, 1950), <<El Llano en llamas>> (diciembre, 1950) y <<Diles que no me maten>> (agosto, 1951).\footnote{Además de colaborador de la revista, Rulfo fue parte del comité directivo. Marco Antonio Millán comentó sobre la publicación paulatina de los cuentos de Rulfo en \emph{América}: <<Juan crecía en tanto le publicábamos poco a poco todo \emph{El Llano en llamas}>>. Millán \emph{apud} López Mena, \emph{op. cit.}, p. 67.}
+Por amistad y quizá en gratitud, Rulfo dio a Hernández para \emph{América} siete de los diecisiete relatos que luego integrarían \emph{El Llano en llamas}: <<Nos han dado la tierra>> (agosto, 1945), <<Macario>> (1946), <<Es que somos muy pobres>> (agosto, 1947), <<La cuesta de las comadres>> (febrero, 1948), <<Talpa>> (enero, 1950), <<El Llano en llamas>> (diciembre, 1950) y <<Diles que no me maten>> (agosto, 1951).\footnote{Además de colaborador de la revista, Rulfo fue parte del comité directivo. Marco Antonio Millán comentó sobre la publicación paulatina de los cuentos de Rulfo en \emph{América}: <<Juan crecía en tanto le publicábamos poco a poco todo \emph{El Llano en llamas}>>. Millán \emph{apud} López Mena, \emph{op. cit.}, p. 67.}
 
 Cabe anotar que dos de estos cuentos, <<Nos han dado la tierra>> y <<Macario>>, no fueron publicados inicialmente en \emph{América}, pues aparecieron por primera vez en \emph{Pan. Revista de Literatura}, coordinada por Juan José Arreola y Antonio Alatorre. No obstante, \emph{América} albergó estos siete cuentos antes de que aparecieran en el volumen \emph{El Llano en Llamas}, más el relato <<La vida no es muy seria en sus cosas>> (junio, 1945), que no fue incluido en dicho volumen.\footnote{Los cuentos de Rulfo publicados por primera vez en \emph{Pan} son: <<Nos han dado la tierra>>, núm. 2, julio, 1945, pp. 1-3 y <<Macario>>, núm. 6, noviembre, 1945, pp. 1-3. Los publicados por primera vez en \emph{América}: <<La vida no es muy seria en sus cosas>>, núm. 40, 30 de junio, 1945, pp. 35-36; <<Es que somos muy pobres>>, núm. 54, 30 de agosto, 1947, pp. 24-29; <<La Cuesta de las Comadres>>, núm. 55, 29 de febrero, 1948, pp. 31-38; <<Talpa>>, núm. 62, 29 de febrero, 1948, pp. 79-87; <<El Llano en llamas>>, núm. 64, diciembre, 1950, pp. 66-85; y <<Diles que no me maten>>, núm. 66, agosto, 1951, pp. 125-130. Cfr. García Bonilla, \emph{op. cit.}, pp. 411-412 y Acuña, \emph{op. cit.}, pp. 174-175.} Así, con el impulso de estas dos revistas, se iba perfilando y difundiendo, paulatinamente, el magistral libro de Rulfo antes de salir en su primera edición de 1953. Esto fue motivo de enemistad entre Rulfo y Marco Antonio Millán, Director de \emph{América}, dado que Rulfo había insinuado la posibilidad de que sus cuentos se publicaran todos, por primera vez, en la revista; finalmente, como se sabe, aparecieron bajo el sello del Fondo de Cultura Económica, en la colección Lecturas Mexicanas.
 \section*{Rasgos generales de su narrativa}\label{sec:rasgos-generales-de-su-narrativa}
 \addcontentsline{toc}{section}{Rasgos generales de su narrativa}
 Efrén Hernández publicó sus cuentos entre 1928 y 1941, cuando la narrativa mexicana en boga tenía como tema central, o como uno de sus ejes principales, la Revolución Mexicana. Sus personajes, anónimos, marginales, distraídos, son soñadores y con frecuencia se demoran en algún circunloquio. Fundada en el humor, esta narrativa es ingenua, grave y disparatada a veces, una pluralidad de voces conversacionales que dialogan con ellas mismas, con el autor y con el lector.
 
-Los temas que los ocupan son inocentes a simple vista: un clavito que flota en el aire y un escritor que intenta amarrar el tiempo para escribir una historia jamás
-leída; una Santa Teresa con vida en un cuadro que convive con ratoncitos parlanchines y reflexivos; un pájaro pensante y refunfuñón, un estudiante distraído; un paralítico ansioso de moverse como los árboles; tomates adorados como santos; palabras que caminan, duermen y sueñan... Tras ellos, Hernández plantea, como
-sin querer, asuntos que dejan perplejos a quienes acompañan su escritura.
+Los temas que los ocupan son inocentes a simple vista: un clavito que flota en el aire y un escritor que intenta amarrar el tiempo para escribir una historia jamás leída; una Santa Teresa con vida en un cuadro que convive con ratoncitos parlanchines y reflexivos; un pájaro pensante y refunfuñón, un estudiante distraído; un paralítico ansioso de moverse como los árboles; tomates adorados como santos; palabras que caminan, duermen y sueñan... Tras ellos, Hernández plantea, como sin querer, asuntos que dejan perplejos a quienes acompañan su escritura.
 
-Son personajes y temas, evidentemente, alejados de la estética de la Revolución Mexicana y de la prosa indigenista de principios del siglo \textsc{xx}; distantes
-también de la narrativa de Contemporáneos, influida por la vanguardia europea que exploraba poéticamente al sujeto y postergaba la narración. Hay en la narrativa de Hernández, de manera intertextual y como proyección artística, cierto parentesco o afiliación a una tradición visible en obras como \emph{Don Quijote de la Mancha}, donde lo cotidiano, lo pequeño y lo absurdo son algo, al mismo tiempo, maravilloso y
-trascendente.
+Son personajes y temas, evidentemente, alejados de la estética de la Revolución Mexicana y de la prosa indigenista de principios del siglo \textsc{xx}; distantes también de la narrativa de Contemporáneos, influida por la vanguardia europea que exploraba poéticamente al sujeto y postergaba la narración. Hay en la narrativa de Hernández, de manera intertextual y como proyección artística, cierto parentesco o afiliación a una tradición visible en obras como \emph{Don Quijote de la Mancha}, donde lo cotidiano, lo pequeño y lo absurdo son algo, al mismo tiempo, maravilloso y trascendente.
 
 De su escritura se ha dicho que es vanguardista. Podría pensarse en cierta similitud con este movimiento artístico, como comentaré en el primer capítulo, no obstante, su literatura se nutría del Siglo de Oro español (<<el mejor momento de mi propio y nativo idioma>>, decía Hernández), antes que en la de su siglo.\footnote{En el prólogo que escribe para \emph{Liras de amor y muerte}, de Roberto Guzmán Araujo, Hernández criticó mordazmente al estridentismo, al surrealismo (cuyos productos eran <<abortos prematuros>>), al dadaísmo (incapaz de quitarse su <<tartamudez>>), al simbolismo y al academismo. Para él, un escritor debía tener como directrices la originalidad, la sinceridad, la claridad, la sencillez y, sobre todo, debía beber de la tradición literaria propia y no de las corrientes de moda. \emph{Videm} Efrén Hernández, <<Sobre lo humano en la poesía>> y <<Del surrealismo>> en Franco Bagnouls, \emph{op. cit.}, pp. 33-39; 175-176.} Si compartía con el surrealismo, por ejemplo, que la imaginación era fundamental en la actividad artística, como Bretón asentaba en el primer manifiesto surrealista de 1924,\footnote{Cfr. André Breton, \emph{Manifiestos del surrealismo}, Argentina, Terramar, 2006.} o que la poesía era una forma de vida, se distanciaba de él porque no apelaba a un automatismo psíquico en la creación artística ni a un distanciamiento de lo social, tampoco pretendió expresar <<el funcionamiento real del pensamiento>>\footnote{\emph{Ibid}., p. 31.} o explorar otros experimentos vanguardistas. La narrativa de Hernández parece nutrirse de una concepción de la literatura donde esta es un referente por sí misma; para él toda obra tenía como fundamento lo humano, así, para desarrollar su poética ficcional, estuvo atento a su realidad y a las voces de su tradición literaria.
 
@@ -530,9 +474,8 @@ En suma, en este trabajo se analiza el papel de la risa en la configuración de 
 \pagestyle{empty}
 \vspace*{42pt}
 \begin{flushright}
-\begin{minipage}{7.5cm} % 7.5cm para carta; 6cm para medio oficio.
-\emph{La pugna de Efrén Hernández no es contra la literatura mexicana sino contra la literatura. Contra la trama. Contra el sentido. Contra el lenguaje. Contra todo
-aquello que impide decir la vida amorfa.}
+\begin{minipage}{7.5cm}
+\emph{La pugna de Efrén Hernández no es contra la literatura mexicana sino contra la literatura. Contra la trama. Contra el sentido. Contra el lenguaje. Contra todo aquello que impide decir la vida amorfa.}
 \begin{flushright}
 \textsc{Rafael Lemus}
 \end{flushright}
@@ -553,8 +496,8 @@ contents=1
 \thispagestyle{empty}
 \pagestyle{fancy}
 \fancyhf{} % Remueve los encabezados y pies previos. Necesario sí o sí.
-\fancyhead[RE]{\small\sc el humor como poética en los cuentos de efrén hernández} % \small para carta; \footnotesize para medio oficio.
-\fancyhead[LO]{\small\sc i \textbullet\ risa, vanguardia y cuento hispanoamericano} % \small para carta; \footnotesize para medio oficio.
+\fancyhead[RE]{\small\sc el humor como poética en los cuentos de efrén hernández}
+\fancyhead[LO]{\small\sc i \textbullet\ risa, vanguardia y cuento hispanoamericano}
 \fancyhead[RO,LE]{\textlf{\thepage}}
 \renewcommand{\headrulewidth}{0pt}
 \pagenumbering{arabic}
@@ -567,22 +510,17 @@ Esa revolución se ancla, sobre todo, en un cuestionamiento de la racionalidad c
 \begin{quoting}
 un tipo de producción simbólica que disolvió definitivamente ciertas concepciones heredadas de la segura sociedad decimonónicamente burguesa, al proponer el relativismo de toda producción artística y filosófica como algo propio de una civilización que sabía o había aprendido la historicidad de todo lo construido por el hombre y su eventual caducidad. En cierto modo podría afirmarse que la vanguardia muestra la modificación, o mejor aún, la creación de un nuevo imaginario social.\footnote{Achugar \emph{apud} Hugo J.\,Verani (ed.), \emph{Narrativa vanguardista hispanoamericana}, México, Universidad Nacional Autónoma de México, 1996. p. 13.}
 \end{quoting}
-En este nuevo imaginario social, que toma fuerza principalmente en el París de finales del \textsc{xix}, el escenario hasta entonces reconocido como propio de la actividad artística cambia. Como asienta Bolívar Echeverría \xout{en <<De la academia a la bohemia y más allá>>}, la figura del artista se desplaza de los talleres de arte institucionales a cafés y cabarets, en los que, como puede advertirse en \emph{Baile en el Moulin de la Galette} de Renoir, <<la vida se libera de su compulsión productivista>>\footnote{Bolívar Echeverría, <<De la academia a la bohemia y más allá>>. \emph{Theoría. Revista del Colegio de Filosofía} 19 (2009), p. 51.} y se acerca al mundo de la fiesta, lo cual simboliza la vuelta del arte a su matriz premoderna. A partir de este desplazamiento, el arte de vanguardia deja atrás la \emph{mímesis de la realidad} y se resuelve en una \emph{mímesis festiva}, que es
+En este nuevo imaginario social, que toma fuerza principalmente en el París de finales del \textsc{xix}, el escenario hasta entonces reconocido como propio de la actividad artística cambia. Como asienta Bolívar Echeverría, la figura del artista se desplaza de los talleres de arte institucionales a cafés y cabarets, en los que, como puede advertirse en \emph{Baile en el Moulin de la Galette} de Renoir, <<la vida se libera de su compulsión productivista>>\footnote{Bolívar Echeverría, <<De la academia a la bohemia y más allá>>. \emph{Theoría. Revista del Colegio de Filosofía} 19 (2009), p. 51.} y se acerca al mundo de la fiesta, lo cual simboliza la vuelta del arte a su matriz premoderna. A partir de este desplazamiento, el arte de vanguardia deja atrás la \emph{mímesis de la realidad} y se resuelve en una \emph{mímesis festiva}, que es
 \begin{quoting}
 una mímesis de segundo grado, que no imita la realidad sino la desrealización festiva de la realidad; una mímesis que no retrata los objetos del mundo de la vida sino la transfiguración por la que ellos pasan cuando se encuentran incluidos en otra mímesis, aquella que la existencia festiva hace del momento extraordinario del modo de ser humano.\footnote{\emph{Ibid.}, p. 55.}
 \end{quoting}
 La fiesta es una interrupción del modo ordinario de la vida humana, y una de sus señas es la irrupción de un caos lúdico vinculado a la risa. Es como si en la fiesta <<el caos ---lo otro, humanizado o ``domesticado'' como la contraparte del cosmos humano--- hiciera un gesto de amenaza, fingiera hacer estallar esa humanización o ``domesticación'', destruirla (así sea, lúdicamente, para reconstruirla después)>>.\footnote{\emph{Ibid.}, p. 53.} En esta destrucción de la fiesta, la risa es la gran protagonista.
 
-El mundo en que nacieron las vanguardias, el de los cafés y cabarets, no es el de la fiesta popular masiva, de épocas anteriores a la modernidad, como el carnaval medieval, pero conserva parte de su esencia y no se disuelve por completo en la privatización o el individualismo del tiempo de ocio.\footnote{Luis Beltrán anota que <<En Occidente, la fiesta semanal se ha convertido en el fin de semana, de momento de dos días. Y aún se le añaden los periodos de vacaciones. El resultado es la pérdida del sentido alegre de la fiesta y de la comunidad feliz. La fiesta deja de ser el tiempo de la alegría, de la risa, para convertirse en el tiempo del ocio, un tiempo sin actividad productiva, un tiempo para el aislamiento>>. Luis Beltrán Almería, \emph{Anatomía de la risa}, México, Ediciones Sin Nombre"/Consejo Nacional
-de Ciencia y Tecnología"/ Universidad de Sonora, 2011, p. 19 [Relámpago la risa; coord. Martha Elena Munguía Zatarain].} La vida de los cafés y cabarets, pese a estar inscrita en el tiempo del ocio, es un cronotopo festivo en el que surge, aunque restringido, el ambiente de la fiesta universal, sobre todo a través de la ingesta de alcohol. Sus participantes, como los de la gran fiesta universal, también experimentan una liberación transitoria a través de la que acceden al <<reino utópico [...], de la libertad, de la igualdad y de la abundancia>>.\footnote{Bajtín, \emph{op. cit}., p. 15. \hl{Esta cita está mal. No se ha citado anteriormente a Bajtín en alguna de sus obras y, por lo tanto, no se puede poner \emph{op. cit.} Existe otro problema; en la bibliografía final hay tres obras de Bajtín. ¿A cuál de ellas se refiere esta cita? ¿1989? ¿1993? ¿2005? Julián, indicame a cuál de ellas se refiere.}}
+El mundo en que nacieron las vanguardias, el de los cafés y cabarets, no es el de la fiesta popular masiva, de épocas anteriores a la modernidad, como el carnaval medieval, pero conserva parte de su esencia y no se disuelve por completo en la privatización o el individualismo del tiempo de ocio.\footnote{Luis Beltrán anota que <<En Occidente, la fiesta semanal se ha convertido en el fin de semana, de momento de dos días. Y aún se le añaden los periodos de vacaciones. El resultado es la pérdida del sentido alegre de la fiesta y de la comunidad feliz. La fiesta deja de ser el tiempo de la alegría, de la risa, para convertirse en el tiempo del ocio, un tiempo sin actividad productiva, un tiempo para el aislamiento>>. Luis Beltrán Almería, \emph{Anatomía de la risa}, México, Ediciones Sin Nombre"/Consejo Nacional de Ciencia y Tecnología"/ Universidad de Sonora, 2011, p. 19 [Relámpago la risa; coord. Martha Elena Munguía Zatarain].} La vida de los cafés y cabarets, pese a estar inscrita en el tiempo del ocio, es un cronotopo festivo en el que surge, aunque restringido, el ambiente de la fiesta universal, sobre todo a través de la ingesta de alcohol. Sus participantes, como los de la gran fiesta universal, también experimentan una liberación transitoria a través de la que acceden al <<reino utópico [...], de la libertad, de la igualdad y de la abundancia>>.\footnote{Bajtín, \emph{op. cit}., p. 15. \hl{Esta cita está mal. No se ha citado anteriormente a Bajtín en alguna de sus obras y, por lo tanto, no se puede poner \emph{op. cit.} Existe otro problema; en la bibliografía final hay tres obras de Bajtín. ¿A cuál de ellas se refiere esta cita? ¿1989? ¿1993? ¿2005? Julián, indicame a cuál de ellas se refiere.}}
 
-En \emph{Historia de la risa y la burla}, Georges Minois comenta sobre ese ambiente a través de la figura del borrachín en los cafés franceses de fines del siglo \textsc{xix}: <<se revuelca en el lodo, apesta, vomita, escupe, orina, se pee. Su apestoso talante pertenece a la muy popular boga de la suciedad que amenizaba los cafés-concierto, o a los lectores del \emph{Journal des merdeux}>>.\footnote{\emph{Le Journal des merdeux} (trad. al esp. como \emph{El Diario de mierda}) fue una publicación finisecular de un único número editada en 1882 por Jules Jouy (1855-1897). George Minois, \emph{Historia de la risa y la burla: del Renacimiento a nuestros días}, México, Universidad Veracruzana"/Ficticia"/Consejo Nacional de Ciencia y Tecnología, 2018, p. 290.}
+En \emph{Historia de la risa y la burla}, Georges Minois comenta sobre ese ambiente a través de la figura del borrachín en los cafés franceses de fines del siglo \textsc{xix}: <<se revuelca en el lodo, apesta, vomita, escupe, orina, se pee. Su apestoso talante pertenece a la muy popular boga de la suciedad que amenizaba los cafés-concierto, o a los lectores del \emph{Journal des merdeux}>>.\footnote{\emph{Le Journal des merdeux} (trad. al esp. como \emph{El Diario de mierda}) fue una publicación finisecular de un único número editada en 1882 por Jules Jouy (1855-1897). George Minois, \emph{Historia de la risa y la burla: del Renacimiento a nuestros días}, México, Universidad Veracruzana"/Ficticia"/Consejo Nacional de Ciencia y Tecnología, 2018, p. 290.} El borrachín es la encarnación del caos lúdico que surge en la fiesta, de ahí su fuerza nihilista, destructiva. ¿Podemos dudar de que el borrachín es imagen del caos festivo, que, como señala Echeverría, es la pantomima de una amenaza que se dirige a la domesticación humana y finge destruirla?
 
-El borrachín es la encarnación del caos lúdico que surge en la fiesta, de ahí su fuerza nihilista, destructiva. ¿Podemos dudar de que el borrachín es imagen del
-caos festivo, que, como señala Echeverría, es la pantomima de una amenaza que se dirige a la domesticación humana y finge destruirla?
-
-En ese París finisecular que evoca Minois, el arte no solo estaba impulsado por la risa insensata y descabellada, también por un humor oscuro y desencantado representado por Georges Courteline (1859-1929). Ambos talantes, sin embargo, partían de un punto común enraizado en el espíritu de los tiempos: <<el sentimiento del sinsentido del universo y el carácter indeterminado, indecidible, de las cosas>>.\footnote{\emph{Ibid.}, p. 358.} En honor a este sentimiento es que <<entre la depresión y la fantasía, el hombre de fines de siglo flota, sin puntos de referencia, riéndose de todo y de nada [...]>>.\footnote{\emph{Ídem.}} Fue esta risa insensata, descabellada, oscura, hija del sinsentido, la que hizo del París de la Bella Época la capital de la risa y de la vanguardia, pues esta heredó de aquella
-su fuerza nihilista, caótica y destructiva.
+En ese París finisecular que evoca Minois, el arte no solo estaba impulsado por la risa insensata y descabellada, también por un humor oscuro y desencantado representado por Georges Courteline (1859-1929). Ambos talantes, sin embargo, partían de un punto común enraizado en el espíritu de los tiempos: <<el sentimiento del sinsentido del universo y el carácter indeterminado, indecidible, de las cosas>>.\footnote{\emph{Ibid.}, p. 358.} En honor a este sentimiento es que <<entre la depresión y la fantasía, el hombre de fines de siglo flota, sin puntos de referencia, riéndose de todo y de nada [...]>>.\footnote{\emph{Ídem.}} Fue esta risa insensata, descabellada, oscura, hija del sinsentido, la que hizo del París de la Bella Época la capital de la risa y de la vanguardia, pues esta heredó de aquella su fuerza nihilista, caótica y destructiva.
 
 Son incontables las veces en que la ruptura de la tradición que instauró la vanguardia se dio a través de la risa, como podemos apreciar en <<Dadá manifiesto sobre el amor débil y el amor amargo>>, de Tristan Tzara (\mbox{1896-1963}), que es una suerte de irónicas instrucciones <<Para hacer un poema dadaísta>>, de una risa cuyo objetivo es la tradición y, en un giro de autoescarnecimiento, el mismo movimiento Dadá.\footnote{Tristan Tzara. \emph{Siete manifiestos Dadá}. México, Tusquets, 2013, p. 50.}
 \section{¿Un escritor de vanguardia u original? Interpretaciones de sus relatos}\label{sec:un-escritor-de-vanguardia-u-original-interprestaciones-de-sus-relatos}
@@ -629,7 +567,7 @@ especialmente del cuento:
 \item[\textlf{8}]la presencia destacada de la risa.\footnote{Cfr. Achugar \emph{apud} Verani, \emph{op. cit.}, pp. 23-30.}
 \end{enumerate}
 % ===============================================================================
-%1) La “invasión de la primera persona”, es decir, los relatos son narrados por un “yo” que no es el sujeto sólido y de una pieza de los cuentos de épocas y tendencias artísticas anteriores, sino un personaje discontinuo y fragmentado; 2) el desmantelamiento de los fundamentos lógicos de la narrativa realista; el resultado son relatos que no siguen las coordenadas espacio-temporales o las leyes de causa-efecto tradicionales y se abren a mundos oníricos; 3) el impacto de la revolución psicológica y tecnológica en la creación de personajes y espacios; 4) una importante influencia de la poesía en la escritura; 5) preferencia por personajes degradados o marginales; 6) la conciencia metadiscursiva y metanarrativa; 7) el espacio ficcional predominantemente urbano; y 8) la presencia destacada de la risa.65
+%1) La ``invasión de la primera persona'', es decir, los relatos son narrados por un ``yo'' que no es el sujeto sólido y de una pieza de los cuentos de épocas y tendencias artísticas anteriores, sino un personaje discontinuo y fragmentado; 2) el desmantelamiento de los fundamentos lógicos de la narrativa realista; el resultado son relatos que no siguen las coordenadas espacio-temporales o las leyes de causa-efecto tradicionales y se abren a mundos oníricos; 3) el impacto de la revolución psicológica y tecnológica en la creación de personajes y espacios; 4) una importante influencia de la poesía en la escritura; 5) preferencia por personajes degradados o marginales; 6) la conciencia metadiscursiva y metanarrativa; 7) el espacio ficcional predominantemente urbano; y 8) la presencia destacada de la risa.65
 % =================================================================================
 A decir de Hugo Achugar, la transformación narrativa de la prosa vanguardista se debe a la invasión de la primera persona;\footnote{Achugar \emph{apud} Verani, \emph{op. cit.}, p. 23.} de ahí que, como señala Franco Bagnouls, el proceso narrativo se decanta hacia los procesos mentales y emocionales del propio narrador:
 \begin{quoting}
@@ -651,8 +589,8 @@ Achugar lo caracteriza como <<ese yo, o sujeto en primera persona, que poetiza l
 \thispagestyle{empty}
 \pagestyle{fancy}
 \fancyhf{} % Remueve los encabezados y pies previos. Necesario sí o sí.
-\fancyhead[RE]{\small\sc el humor como poética en los cuentos de efrén hernández} % \small para carta; \footnotesize para medio oficio.
-\fancyhead[LO]{\small\sc fuentes consultadas} % \small para carta; \footnotesize para medio oficio.
+\fancyhead[RE]{\small\sc el humor como poética en los cuentos de efrén hernández}
+\fancyhead[LO]{\small\sc fuentes consultadas}
 \fancyhead[RO,LE]{\textlf{\thepage}}
 \renewcommand{\headrulewidth}{0pt}
 \pagenumbering{arabic}
@@ -921,24 +859,19 @@ Achugar lo caracteriza como <<ese yo, o sujeto en primera persona, que poetiza l
 \hangpara{1cm}{1}\textsc{Villaurrutia}, Xavier, <<Efrén Hernández: El señor de palo>>, en \emph{Obras} (pról. de Alí Chumacero, recopilación de textos de Miguel Capistrán, Alí Chumacero y Luis Mario Schneider, bibliografía de Luis Mario Schneider), México, Fondo de Cultura Económica, 1996.\phantomsection\label{bib:villaurrutia1996}
 
 \hangpara{1cm}{1}\textsc{Yurkievich}, Saúl, <<Los avatares de la vanguardia>>, en \emph{Revista iberoamericana}, vol. 48, no. 118, (1982), pp. 351-366.\phantomsection\label{bib:yurkievich1982}
-
 % COLOFÓN
 \newpage
 \pagestyle{empty}
 \pdfbookmark{Colofón}{contents}
 \hspace*{0pt}
 \vfill
-%\begin{center}
-%\includegraphics[width=2cm]{03} % 2cm para carta, 1.5cm para medio oficio.
-%\end{center}
-% \small para carta, \footnotesize para medio oficio.
+\begin{center}
+\includegraphics[width=2cm]{03}
+\end{center}
 {\footnotesize\squarepar{\emph{La trascendencia de lo nimio. El humor como poética en los cuentos de Efrén Hernández} de José Julián González Osorno, se terminó de maquetar en Cerrada de Colima núm. 7301, col. Universidades, Heroica Puebla de Zaragoza (México). El manuscrito se capturó con el editor de texto plano \TeX{}maker (5.0.3) y se diagramó en el sistema de composición tipográfico \LaTeX{} desarrollado por Leslie Lamport, basado en el lenguaje de programación \TeX{} creado por Donald E.\,Knuth; el archivo fuente fue compilado mediante el motor de tipografías \hologo{pdfTeX} desarrollado por \hologo{HanTheThanh}. En su composición se empleó tipografía Cochineal, \emph{fork} de Crimson de Sebastian Kosch realizada por Michael Sharpe. Las imágenes se manipularon en \textsc{gimp} (2.10.22); la portada se diseñó en LibreOffice Draw (7.3.0.3). Disposición tipográfica realizada para papel \emph{Bond} tamaño carta de 90\,gr. Diseño y formación:}}
 \begin{center}
 \small\textcalligra{\href{muxkernel@gmail.com}{Tuxkernel}}
 \end{center}
-%\begin{center}
-%\Bart
-%\end{center}
 \vfill
 % PÁGINA EN BLANCO
 \newpage

@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Cochineal-Roman';
+    src: url('/fonts/Cochineal-Roman.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cochineal-Italic';
+    src: url('/fonts/Cochineal-Italic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cochineal-Bold';
+    src: url('/fonts/Cochineal-Bold.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cochineal-BoldItalic';
+    src: url('/fonts/Cochineal-BoldItalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}

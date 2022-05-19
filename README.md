@@ -1,4 +1,4 @@
-# <span style="color:white">TESIS</span>
+# <span style="color:white">Tesis</span>
 
 ---
 

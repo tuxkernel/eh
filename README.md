@@ -28,6 +28,10 @@
 
 ---
 | Leer | Descargar |
+| ---- | --------- |
 | impresa | impresa |
+| ------- | ------- |
 | pantalla-día | pantalla-día |
+| ------------ | ------------ |
 | pantalla-noche | pantalla-noche |
+| -------------- | -------------- |

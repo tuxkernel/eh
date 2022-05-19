@@ -27,3 +27,7 @@
 ### <center><a href="https://github.com/tuxkernel/julian/raw/main/julian-pdfa-1b.pdf">Descargar</a></center>
 
 ---
+| Leer | Descargar |
+| impresa | impresa |
+| pantalla-día | pantalla-día |
+| pantalla-noche | pantalla-noche |

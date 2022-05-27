@@ -8,19 +8,19 @@ header {
 }
 h1, h2, h3 {
   text-align: center;
-  font-family: CronosPro;
+  font-family: CronosPro, sans-serif;
   font-weight:normal;
   font-style:normal;
 }
 @font-face {
-    font-family: CronosPro;
+    font-family: CronosPro, sans-serif;
     src: url("fonts/CronosPro-Regular.otf") format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 .oldstyle {
     font-variant-numeric: oldstyle-nums;
-    font-family: CronosPro;
+    font-family: CronosPro, sans-serif;
 }
 .demotext {
   font-variant: small-caps;

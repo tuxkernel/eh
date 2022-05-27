@@ -8,19 +8,19 @@ header {
 }
 h1, h2, h3 {
   text-align: center;
-  font-family: Cochineal;
+  font-family: CronosPro;
   font-weight:normal;
   font-style:normal;
 }
 @font-face {
-    font-family: Cochineal;
-    src: url("fonts/Cochineal-Roman.otf") format('opentype');
+    font-family: CronosPro;
+    src: url("fonts/CronosPro-Regular.otf") format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 .oldstyle {
     font-variant-numeric: oldstyle-nums;
-    font-family: Cochineal;
+    font-family: CronosPro;
 }
 .demotext {
   font-variant: small-caps;

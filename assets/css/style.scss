@@ -5,6 +5,10 @@
 
 header {
   display: none;
+  background-image: url("images/eh3.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
 h1, h2, h3 {
   text-align: center;
@@ -30,6 +34,3 @@ h1, h2, h3 {
   font-kerning: auto;
 }
 
-body {
-  background-image: url("images/eh3.jpg");
-}

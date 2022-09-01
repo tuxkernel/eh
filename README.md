@@ -1,1 +1,0 @@
-# Efrén Hernández homepage

@@ -1,3 +1,0 @@
-Control de versiones:
-
-1.001 Mejora de números de página en Índice (02-11-2022)

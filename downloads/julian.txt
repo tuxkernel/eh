@@ -244,6 +244,7 @@ kerning=true,spacing=false,factor=1100,stretch=20,shrink=20]{microtype} % kernin
 %\renewcommand\thelinenumber{\color{blue}\arabic{linenumber}} % Agrega color a las líneas
 %\usepackage[columns=2,headings=false,margin=false]{typogrid} % Draw a grid on the page.
 %\usepackage[normalem]{ulem} % Para tachar palabras. Úsese \xout{text} o \sout{text}
+\usepackage{verse} % Composición de poesía.
 
 % ENCABEZADOS
 
@@ -427,7 +428,7 @@ Especial mención hago de la Dra.~Yanna Hadatty Mora, mi asesora. Gracias por ac
 
 Del mismo modo, estoy en deuda con el Dr.~Juan Manuel Berdeja Acevedo, amigo y miembro activo de la cofradía hernandeana. Sus agudos comentarios y estudios sobre Efrén Hernández fueron de mucha utilidad para mi análisis; gracias, querido Juan, por ser siempre un atento interlocutor.
 
-Gracias, asimismo, a mis padres, Cecilia y Víctor Manuel, por el aliento de siempre; a Víctor e Iván González Osorno, mis hermanos, por su apoyo; a Tuxkernel, mi amigo entrañable, por maquetar este texto y por enseñarme, entre café y té, algunos principios básicos sobre tipografía y diseño editorial; y a Virginia Amelia, mi amiga de toda la vida, por estar presente.
+Gracias, asimismo, a mis padres, Cecilia y Víctor Manuel, por el aliento de siempre; a Víctor e Iván González Osorno, mis hermanos, por su apoyo; a \href{muxkernel@gmail.com}{Tuxkernel}, mi amigo entrañable, por maquetar este texto y por enseñarme, entre café y té, algunos principios básicos sobre tipografía y diseño editorial; y a Virginia Amelia, mi amiga de toda la vida, por estar presente.
 
 Por último, agradezco al Consejo Nacional de Ciencia y Tecnología (\textsc{conacyt}) por brindarme una beca para realizar esta investigación durante el periodo 2007-2011; también a los catedráticos de la maestría en Literatura Mexicana de la Universidad Veracruzana, quienes, con sus enseñanzas, hicieron posible mi ingreso a esta prestigiosa institución, la Universidad Nacional Autónoma de México. Ser un alumno egresado del Doctorado en Letras por esta universidad es un orgullo, una alta responsabilidad.
 \clearpage
@@ -1401,7 +1402,8 @@ Otra alusión a una fábula menos conocida aparece cuando el narrador invita al 
 ¿Usted gusta? Vamos a leer. ``Santa Teresa de Jesús era incansable, se movió febrilmente, no paró en toda su vida''.
 
 Luego viene un regaño. El autor de este prólogo regaña al autor de otro prólogo a un libro de la misma señorita; porque tuvo el atrevimiento de pensar los siguientes versos:
-\begin{verse}
+\settowidth{\versewidth}{¿Son de alguna utilidad? (p. 127)}
+\begin{verse}[\versewidth]
 Tantas idas \\
 y venidas, \\
 tantas vueltas \\
@@ -1413,7 +1415,8 @@ que me diga: \\
 \end{quoting}
 La parte en verso, como ha hecho notar Yanna Hadatty,\footnote{Hadatty, \emph{op. cit.}, p. 88.} corresponde a la fábula ``La ardilla y el caballo'' de Tomás de Iriarte.\footnote{María de Pina (sel. y ns.), \emph{Fábulas morales}. Porrúa, México, 1989, 15"a ed., pp. 137-138. [Sepan cuántos...]} Una ardilla ve la ligereza, la destreza y velocidad de un alazán y se compara con él
 diciendo:
-\begin{verse}
+\settowidth{\versewidth}{no me estoy quieta jamás.\footnote{\emph{Ibid.}, p. 138.}}
+\begin{verse}[\versewidth]
 Yo soy viva, \\
 soy activa, \\
 me meneo, \\
@@ -1423,7 +1426,8 @@ subo y bajo, \\
 no me estoy quieta jamás.\footnote{\emph{Ibid.}, p. 138.}
 \end{verse}
 A esto, el alazán responde:
-\begin{verse}
+\settowidth{\versewidth}{¿son de alguna utilidad?}
+\begin{verse}[\versewidth]
 Tantas idas \\
 y venidas, \\
 tantas vueltas \\
@@ -1465,7 +1469,8 @@ En ``El señor de palo'' se da esta intertextualidad también cuando su protagon
 Hernández volvió a utilizar la imagen en 1943, en el poema ``Ay del que murmurando''. Allí aparece, levemente cambiado, entre comillas: ``De lo que el corazón abunda, habla la boca...'', para señalar que también de lo contrario, de la soledad, de lo que le falta al corazón, el hombre abastece ``su canto y su clamor''.\footnote{Efrén Hernández, \emph{Entre apagados muros}. Imprenta Universitaria, México, 1943, p. 54.} En ambos textos, como puede advertirse, Hernández sostiene que el hombre no solo se nutre de lo bueno del corazón, sino también de lo que en él es ausencia. Así, la apropiación del discurso religioso sirve para tejer sentidos textuales distintos. También es interesante observar en ``El señor de palo'' cómo la sentencia religiosa ``No se mueve la hoja del árbol sin la voluntad de Dios'' se utiliza como una imagen que evoca la condición del protagonista. El señor de palo compara su propia constitución con ese árbol y dice: ``todas las hojas del árbol que soy yo, Dios las ha convertido en las hojas de una estatua de árbol''. Enseguida: ``Dios, el buen deseo de Dios, la voluntad de Dios, que es la electricidad que mueve el motor que hace mover las hojas de los árboles, me ha abandonado por completo'' (p.~144). La sentencia que engloba el poder de Dios es involucrada en una tragedia personal. El Dios-electricidad que mueve el motor que echa a andar el mundo, el motor que hace mover los motores del mundo, lo ha abandonado: la sentencia se convierte en una manera personalísima del narrador de reprochar el abandono de Dios. Escepticismo, quizá. De tal modo, el uso religioso de la palabra se transforma en uso literario.
 
 Hay otros intertextos en él que permiten observar cómo Hernández relee su tradición literaria. Encontramos, por ejemplo, la inclusión de una parte de la Égloga \textsc{iii} de Garcilaso de la Vega. Dice el narrador de ``El señor de palo'': ``Flérida, para mí dulce y sabrosa"/más que la fruta del cercado ajeno'' (p.~170), con ello ilustra el deseo por la mujer ajena, la de las hermosas piernas, esposa del garrotero, que lo llevó a perder las suyas en el accidente del tren. El narrador califica esta égloga como ``una joya de la literatura'' (p.~169). El fragmento de Garcilaso es el siguiente:
-\begin{verse}
+\settowidth{\versewidth}{más blanca que la leche y más hermosa}
+\begin{verse}[\versewidth]
 Flérida, para mí dulce y sabrosa \\
 más que la fruta del cercado ajeno, \\
 más blanca que la leche y más hermosa \\
@@ -1479,13 +1484,15 @@ También se incluye el famoso ``Madrigal'' de Gutierre de Cetina para compararlo
 \begin{quoting}
 En verdad suculentas, en verdad románticas; ni más ni menos que una sopa de letras, con cuyas letras escribieron al servir la sopa un madrigal. Un madrigal escrito con letras bizantinas
 de sopa de letras bien condimentada, ante, supongamos, un sujeto participante de estas dos naturalezas: la naturaleza sentimental de los poetas y la no menos sentimental naturaleza de los involuntarios ayunantes.
-\begin{verse}
+\settowidth{\versewidth}{ya que así me miráis, miradme al menos. (pp.~\mbox{173-174})}
+\begin{verse}[\versewidth]
 Ojos claros, serenos... \\
 ya que así me miráis, miradme al menos. (pp.~\mbox{173-174})
 \end{verse}
 \end{quoting}
 La parte citada por el señor de palo corresponde a la primera y última líneas del madrigal señalado:
-\begin{verse}
+\settowidth{\versewidth}{ya que así me miráis, miradme al menos.}
+\begin{verse}[\versewidth]
 Ojos claros, serenos, \\
 si de un dulce mirar sois alabados, \\
 ¿por qué si me miráis, miráis airados? \\
@@ -1498,7 +1505,8 @@ Ojos claros, serenos, \\
 ya que así me miráis, miradme al menos.\footnote{Margarita Peña (pról., ed. crítica e índices), \emph{Flores de baria poesía. Cancionero novohispano del siglo \textsc{xvi}}. Fondo de Cultura Económica, 2004, p. 395.}
 \end{verse}
 El diálogo con la literatura española también se percibe en la alusión a una fábula de Cayetano Fernández y Cabello, escritor del siglo \textsc{xix}. El señor de palo cuenta el primer desaire que le hace Adelina, la de las piernas hermosas, y menciona que mayor lección no pudo tener en la vida, por eso, desde entonces, ``afianza bien los clavos'', ve que ``no estén deshaciéndose las cuerdas'' y hace ``de tres vueltas los nudos'' (p.~177). ``No sea que se repita'':\pagebreak[4]
-\begin{verse}
+\settowidth{\versewidth}{De noche, en un mal paso y sin linterna,}
+\begin{verse}[\versewidth]
 De noche, en un mal paso y sin linterna, \\
 Juan se rompió una pierna. \\
 Vaya todo por Dios. \\
@@ -1507,7 +1515,8 @@ a aquel paso tremendo, \\
 Juan se rompió las dos. (p. 177)
 \end{verse}
 Esta parte corresponde a ``El Testarudo'' de las \emph{Fábulas ascéticas en verso castellano y en variedad de metros} de Fernández y Cabello.\footnote{Cayetano Fernández y Cabello, \emph{Fábulas ascéticas en verso castellano y en variedad de metros} (pról. Aureliano Fernández Guerra y Orbe). Librería de Gregorio del Amo, Madrid, 1901, 5"a ed. [En línea]: \url{http://cdigital.dgb.uanl.mx/la/1080021948/1080021948.html} [Consulta: 11 de agosto, 2022]} La reelaboración en el cuento de Hernández carece del sentido religioso primigenio, pues en el texto del autor español la fábula contiene una enseñanza religiosa. De hecho, las \emph{Fábulas ascéticas} están inspiradas en la Biblia, particularmente en las parábolas.\footnote{El autor comenta: ``Creo que ni la más delicada conciencia podrá inquietarse por ver publicar fábulas de asuntos religiosos, cuando ese género de literatura se ha destinado siempre á enseñar grandes cosas, y cuando hasta el mismo celestial Maestro Jesucristo expuso y encerró en parábolas altísimas verdades de su soberana doctrina. Cierto que las parábolas no son idénticamente fábulas, atendida la índole especial de estos poemas, pero les falta muy poco; y yo, de buen grado, hubiera hecho todas las del Evangelio otras tantas fábulas''. \emph{Ibid.}, p. \textsc{xix}.} ``El Testarudo'', como es común en las fábulas, contiene una moraleja, pero de tipo religioso, dedicada a los cristianos, y, probablemente, inspirada en El Evangelio según San Lucas; sentido textual, por supuesto, ausente en la reelaboración de Hernández. La fábula completa es la siguiente:
-\begin{verse}
+\settowidth{\versewidth}{De noche, en un mal paso y sin linterna,}
+\begin{verse}[\versewidth]
 De noche, en un mal paso y sin linterna, \\
 Juan se rompió una pierna. \\
 ¡Vaya todo por Dios! \\
@@ -2038,7 +2047,7 @@ El conjunto de estos estudios sugeridos quizá podría aportar valiosa informaci
 \begin{center}
 \includegraphics[width=1.5cm]{03}
 \end{center}
-\def\fileversion{1.001}
-\def\filedate{(02-11-2022)}
+\def\fileversion{1.002}
+\def\filedate{(13-11-2022)}
 {\scriptsize\squarepar{\emph{La trascendencia de lo nimio. El humor como poética en los cuentos de Efrén Hernández} de José Julián González Osorno, se terminó de componer en calle Rayón núm.~25, col. Centro, Altotonga, Veracruz (México). El ``manuscrito'' se capturó con el editor de texto plano \TeX{}maker (5.0.3) de Pascal Brachet, y se formó en el sistema de composición tipográfico \LaTeXe{} de Leslie Lamport, basado en el lenguaje de programación \TeX{} creado por \mbox{Donald E.~Knuth}; el archivo fuente fue compilado con el motor de tipografías pdf\TeX{} desarrollado por Hàn Th\'{ê} Thành. En su composición se utilizó tipografía Cochineal, \emph{fork} de Crimson de Sebastian Kosch realizado por Michael Sharpe. Las imágenes se manipularon en \textsc{gimp} (2.10.22) e Inkscape (1.0.2). Disposición tipográfica realizada para papel \emph{Bond} ahuesado tamaño carta de 90\,gr. Diseño, diagramación y composición tipográfica: \href{muxkernel@gmail.com}{Tuxkernel}. ver.\space\fileversion\space\filedate}}
 \end{document}

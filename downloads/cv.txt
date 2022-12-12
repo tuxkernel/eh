@@ -3,3 +3,4 @@ Control de versiones:
 1.001 Corrección de números de página en Índice y listas numeradas (02-11-2022)
 1.002 Corrección de poesía en citas textuales (13-11-2022)
 1.003 Corrección de errores ortotipográficos (10-12-2022)
+1.004 Corrección de la nota a pie de página (14) en página 113 (11-12-2022)

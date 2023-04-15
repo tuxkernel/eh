@@ -4,3 +4,4 @@ Control de versiones:
 1.002 Corrección de poesía en citas textuales (13-11-2022)
 1.003 Corrección de errores ortotipográficos (10-12-2022)
 1.004 Corrección de la nota a pie de página (14) en página 113 (11-12-2022)
+1.005 Corrección de puntos, comas, puntos y comas, etc. [cursivas] (14-04-2023)

@@ -64,7 +64,7 @@
 % ADORNOS
 
 \usepackage{shapepar} % Para el colofón
-\usepackage{pifont} % Floron \ding{166} (Dedicatoria), Dagger \ding{61} (Notas finales)
+\usepackage{pifont} % Floron \ding{166} (Dedicatoria)
 
 % SANGRIA
 
@@ -261,7 +261,8 @@ kerning=true,spacing=false,factor=1100,stretch=20,shrink=20]{microtype} % kernin
 
 % TABLAS
 
-\usepackage[toc,enum,lineno]{tabfigures} % Mejora los números en toc, items y lineno
+\usepackage[enum,lineno]{tabfigures} % Mejora los números en toc, items y lineno
+% opciones: toc,enum,lineno. toc produce números espaciados. No lucen bien en Índice.
 
 % GRÁFICOS
 
@@ -448,7 +449,9 @@ Por último, agradezco al Consejo Nacional de Ciencia y Tecnología (\textsc{con
 \pagenumbering{arabic}
 \setcounter{page}{7}
 \pdfbookmark{Índice}{indice}
+\microtypesetup{protrusion=false}
 \tableofcontents
+\microtypesetup{protrusion=true}
 % PÁGINA EN BLANCO
 \newpage
 \pagestyle{empty}
@@ -2040,6 +2043,11 @@ El conjunto de estos estudios sugeridos quizá podría aportar valiosa informaci
 
 \hangpara{1cm}{1}\textsc{Yurkievich}, Saúl, ``Los avatares de la vanguardia'', en \emph{Revista iberoamericana,} vol. 48, no. 118, (1982), pp. 351-366.\phantomsection\label{bib:yurkievich1982}
 % COLOFÓN
+% Fix TeX, LaTeX and LaTeXe logos
+%\def\TeX{T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX} % Knuth TeX logo definition
+\renewcommand{\TeX}{T\kern -.1267em\lower .35ex\hbox {E}\kern -.105emX} % For TeX logo
+\renewcommand{\LaTeX}{L\kern-.275em\raisebox{.5ex}{\textsc{a}}\kern-.1em\hbox{\TeX}} % For LaTeX
+\renewcommand{\LaTeXe}{L\kern-.275em\raisebox{.5ex}{\textsc{a}}\kern-.1em\hbox{\TeX} \hbox{2}\kern-.03em\raisebox{-.4ex}{\fontencoding{LGR}\selectfont\char 101}} % Even LaTeXe
 \newpage
 \pagestyle{empty}
 \hspace*{0pt}
@@ -2048,7 +2056,7 @@ El conjunto de estos estudios sugeridos quizá podría aportar valiosa informaci
 \begin{center}
 \includegraphics[width=1.5cm]{03}
 \end{center}
-\def\fileversion{1.005}
-\def\filedate{(14-04-2023)}
-{\scriptsize\squarepar{\emph{La trascendencia de lo nimio. El humor como poética en los cuentos de Efrén Hernández} de José Julián González Osorno, se terminó de componer en calle Rayón núm.~25, col. Centro, Altotonga, Veracruz (México). El <<manuscrito>> se capturó con el editor de texto plano TeXmaker (5.0.3) de Pascal Brachet, y se formó en el sistema de composición tipográfico LaTeX de Leslie Lamport, basado en el lenguaje de programación TeX creado por \mbox{Donald E.~Knuth}; el archivo fuente fue compilado con el motor de tipografías \textsc{pdf}TeX desarrollado por Hàn Th\'{ê} Thành. En su composición se utilizó tipografía Cochineal, \emph{fork} de Crimson Text de Sebastian Kosch realizado por Michael Sharpe. Las imágenes se manipularon en \textsc{gimp} (2.10.22) e Inkscape (1.0.2). Disposición tipográfica realizada para papel \emph{Bond} ahuesado tamaño carta de 90\,gr. Diseño, diagramación y composición tipográfica: \href{muxkernel@gmail.com}{Tuxkernel}. ver.\space\fileversion\space\filedate}}
+\def\fileversion{1.007}
+\def\filedate{(03-09-2023)}
+{\scriptsize\squarepar{\emph{La trascendencia de lo nimio. El humor como poética en los cuentos de Efrén Hernández} de José Julián González Osorno, se terminó de componer en calle Rayón núm. 25, col. Centro, Altotonga, Veracruz (México). El «manuscrito» se capturó con el editor de texto plano \TeX{}maker (5.0.3) de Pascal Brachet, y se formó en el sistema de composición tipográfico \LaTeX{} de Leslie Lamport, basado en el lenguaje de programación \TeX{} creado por \mbox{Donald E. Knuth}; el archivo fuente fue compilado con el motor de tipografías \textsc{pdf}\TeX{} desarrollado por Hàn Th\'{ê} Thành. En su composición se utilizó tipografía Cochineal, \emph{fork} de Crimson Text de Sebastian Kosch realizado por Michael Sharpe. Las imágenes se manipularon en \textsc{gimp} (2.10.22) e Inkscape (1.0.2). Disposición tipográfica realizada para papel \emph{Bond} ahuesado tamaño carta de 90\,gr. Diseño, diagramación y composición tipográfica: \href{muxkernel@gmail.com}{Tuxkernel}. ver.\space\fileversion\space\filedate}}
 \end{document}

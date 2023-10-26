@@ -7,3 +7,5 @@ Control de versiones:
 1.005 Corrección de puntos, comas, puntos y comas, etc. [cursivas] (14-04-2023)
 1.006 Corrección de números de página en Índice (01-09-2023)
 1.007 Corrección de logos TeX, LaTeX, pdfTeX, etc. (03-09-2023)
+1.008 Agregados algunos marcadores en el Índice (25-10-2023)
+1.009 Remoción de algunas líneas de código en el archivo fuente (26-10-2023)

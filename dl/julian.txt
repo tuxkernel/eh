@@ -329,7 +329,9 @@ pdfcopyright={© 2022 José Julián González Osorno. Todos los derechos reserva
 % PORTADA
 \newpage
 \pagestyle{empty}
-\pdfbookmark{Portada}{Portada}
+\protect\phantomsection
+\addcontentsline{toc}{chapter}{\scshape Portada}
+\addtocontents{toc}{\vspace{\normalbaselineskip}} % Add some vertical space between titles in TOC
 \backgroundsetup{
 color=black,
 scale=1, 
@@ -388,7 +390,9 @@ Instituto de Investigaciones Filológicas
 % DEDICATORIA
 \newpage
 \pagestyle{empty}
-\pdfbookmark{Dedicatoria}{Dedicatoria}
+\protect\phantomsection
+\addcontentsline{toc}{chapter}{\scshape Dedicatoria}
+%\pdfbookmark{Dedicatoria}{Dedicatoria}
 \vspace*{42pt}
 \begin{flushright}
 \begin{minipage}{7.5cm}

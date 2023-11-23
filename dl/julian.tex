@@ -448,8 +448,11 @@ Por último, agradezco al Consejo Nacional de Ciencia y Tecnología (\textsc{con
 \fancyhead[RO,LE]{\thepage}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
-\pdfbookmark{Índice}{indice}
+%\pdfbookmark{Índice}{indice}
 \microtypesetup{protrusion=false}
+\protect\phantomsection
+\addtocontents{toc}{\vspace{\normalbaselineskip}}
+\addcontentsline{toc}{chapter}{\scshape Índice}
 \tableofcontents
 \microtypesetup{protrusion=true}
 % PÁGINA EN BLANCO
@@ -1446,7 +1449,7 @@ de lucir mi habilidad.\footnote{\em Ídem.}
 \end{verse}
 La moraleja es que los escritores que gastan su tiempo en obras frívolas pueden terminar siendo como la ardilla. Sentido textual que en ``Santa Teresa'' cambia porque adquiere un tono lúdico. Como puede verse, en este cuento el diálogo con su propia tradición literaria es una apropiación y una renovación, al mismo tiempo. La apropiación de la tradición también se incorpora de forma humorística, por ello logra desacralizar figuras como la de santa Teresa.
 
-También hay referencias a la Biblia en este cuento. Hay una parodia del discurso bíblico cuando se habla de la vida de Jesús, de quien dice que, al principio de sus días, ``era una alhaja'', pero después: ``Jesús cambió completamente. Nos lo dicen San Mateo, San Juan, San Lucas y San Marcos: `Con los años crecía en edad, sabiduría y gracia delante de Dios y de los hombres'{}'' (p.~127). La cita no es totalmente exacta (por supuesto, no importa que lo sea), el narrador alude a los cuatro apóstoles como testigos de ese cambio en la vida de Jesús del Evangelio de San Lucas: ``Y Jesús crecía en sabiduría, y en edad, y en gracia para con Dios y los hombres''.\footnote{``El nuevo testamento'' en \emph{La Santa Biblia. Antiguo y Nuevo testamento} (antigua versión de Casiodoro de Reina; revisada por Cipriano de Valera). Sociedades Bíblicas Unidas, Corea, 2000, p. 67.} Hay un sutil tono de burla en esa narración, entonación que forma parte del humor con que se trata lo sacro en él.\protect\enlargethispage*{\baselineskip}
+También hay referencias a la Biblia en este cuento. Hay una parodia del discurso bíblico cuando se habla de la vida de Jesús, de quien dice que, al principio de sus días, ``era una alhaja'', pero después: ``Jesús cambió completamente. Nos lo dicen San Mateo, San Juan, San Lucas y San Marcos: `Con los años crecía en edad, sabiduría y gracia delante de Dios y de los hombres'{}'' (p.~127). La cita no es totalmente exacta (por supuesto, no importa que lo sea), el narrador alude a los cuatro apóstoles como testigos de ese cambio en la vida de Jesús del Evangelio de San Lucas: ``Y Jesús crecía en sabiduría, y en edad, y en gracia para con Dios y los hombres''.\footnote{``El nuevo testamento'' en La Santa Biblia. Antiguo y Nuevo testamento (antigua versión de Casiodoro de Reina; revisada por Cipriano de Valera). Sociedades Bíblicas Unidas, Corea, 2000, p. 67.} Hay un sutil tono de burla en esa narración, entonación que forma parte del humor con que se trata lo sacro en él.\protect\enlargethispage*{\baselineskip}
 
 Por otra parte, también hay intertextualidad con la oralidad. Los personajes y narradores acuden a los dichos populares, refranes, citas en latín, sentencias, etc., para ilustrar, explicar o ejemplificar sus afirmaciones. Es importante observar, por ejemplo, cómo reformulan los personajes hernandeanos la materia paremiológica, porque estos héroes anónimos son dicharacheros y, como Sancho, tuercen el sentido de los dichos para que se ajusten a lo que desean expresar y eso abona a la comicidad de los relatos.\footnote{Fernando Lázaro Carreter comenta en su estudio preliminar de \emph{Don Quijote} que el modo expresivo de Sancho se caracteriza por su constante uso de refranes. Un elemento, señala, del que Cervantes echó mano para instaurar un ``estímulo cómico'' en su prosa. Fernando Lázaro Carreter, ``Estudio preliminar'', citado en Cervantes Saavedra, \emph{op. cit.,} p. \textsc{xxxiv}.}
 
@@ -1914,7 +1917,7 @@ El conjunto de estos estudios sugeridos quizá podría aportar valiosa informaci
 
 \hangpara{1cm}{1}\textsc{Kristeva}, Julia, ``Bajtín, la palabra, el diálogo y la novela'', en \textsc{Navarro}, Desiderio (sel. y trad.), \emph{Intertextualité. Francia en el origen de un término y el desarrollo de un concepto.} Unión Nacional de Escritores y Artistas de Cuba, La Habana, 1997, pp. 1-24.\phantomsection\label{bib:kristeva1997}
 
-\hangpara{1cm}{1}\emph{La Santa Biblia. Antiguo y Nuevo testamento} (antigua versión de Casiodoro de Reina; revisada por Cipriano Valera). Sociedades Bíblicas Unidas, Corea, 2000.\phantomsection\label{bib:biblia2000}
+\hangpara{1cm}{1}La Santa Biblia. Antiguo y Nuevo testamento (antigua versión de Casiodoro de Reina; revisada por Cipriano Valera). Sociedades Bíblicas Unidas, Corea, 2000.\phantomsection\label{bib:biblia2000}
 
 \hangpara{1cm}{1}\emph{Lazarillo de Tormes} (ed. de Francisco Rico). Cátedra, Madrid, 2005, 18"a ed.\phantomsection\label{bib:lazarillo2005}
 
@@ -2049,9 +2052,9 @@ El conjunto de estos estudios sugeridos quizá podría aportar valiosa informaci
 \begin{center}
 \includegraphics[width=1.5cm]{03}
 \end{center}
-\def\fileversion{1.009}
-\def\filedate{(26-10-2023)}
+\def\fileversion{1.011}
+\def\filedate{(23-11-2023)}
 {\scriptsize\squarepar{\emph{La trascendencia de lo nimio. El humor como poética en los cuentos de Efrén Hernández} de José Julián González Osorno, se terminó de componer en calle Rayón núm. 25, col. Centro, Altotonga, Veracruz (México). El «manuscrito» se capturó con el editor de texto plano \TeX{}maker (5.0.3) de Pascal Brachet, y se formó en el sistema de composición tipográfico \LaTeX{} de Leslie Lamport, basado en el lenguaje de programación \TeX{} creado por \mbox{Donald E. Knuth}; el archivo fuente fue compilado con el motor de tipografías \textsc{pdf}\TeX{} desarrollado por Hàn Th\'{ê} Thành. En su composición se utilizó tipografía Cochineal, \emph{fork} de Crimson Text de Sebastian Kosch realizado por Michael Sharpe. Las imágenes se manipularon en \textsc{gimp} (2.10.22) e Inkscape (1.0.2). Disposición tipográfica realizada para papel \emph{Bond} ahuesado tamaño carta de 90\,gr. Diseño, diagramación y composición tipográfica: \href{muxkernel@gmail.com}{Tuxkernel}. ver.\space\fileversion\space\filedate}}
 \protect\phantomsection
-\addcontentsline{toc}{chapter}{\scshape Colofón}
+\addcontentsline{toc}{chapter}{Colofón}
 \end{document}

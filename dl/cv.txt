@@ -9,3 +9,5 @@ Control de versiones:
 1.007 Corrección de logos TeX, LaTeX, pdfTeX, etc. (03-09-2023)
 1.008 Agregados algunos marcadores en el Índice (25-10-2023)
 1.009 Remoción de algunas líneas de código en el archivo fuente (26-10-2023)
+1.010 Correcciones menores en Bibliografía (18-11-2023)
+1.011 Corrección de la nota a pie de página (16) en página 114 (23-11-2023)

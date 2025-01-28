@@ -2037,6 +2037,10 @@ El conjunto de estos estudios sugeridos quizá podría aportar valiosa informaci
 \hangpara{1cm}{1}\textsc{Villaurrutia}, Xavier, «Efrén Hernández: \emph{El señor de palo}», en \emph{Obras} (not. prelim. de Alí Chumacero; recop. de textos de Alí Chumacero y Luis Mario Schneider; bib. de Luis Mario Schneider). Fondo de Cultura Económica, México, 1996, pp. 854--855.\phantomsection\label{bib:villaurrutia1996}
 
 \hangpara{1cm}{1}\textsc{Yurkievich}, Saúl, «Los avatares de la vanguardia», en \emph{Revista iberoamericana,} vol. 48, no. 118, (1982), pp. 351--366.\phantomsection\label{bib:yurkievich1982}
+% PÁGINA EN BLANCO
+\newpage
+\pagestyle{empty}
+\null\vfill
 % COLOFÓN
 % Fix TeX, LaTeX and LaTeXe logos
 %\def\TeX{T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX} % Knuth TeX logo definition
@@ -2055,4 +2059,12 @@ El conjunto de estos estudios sugeridos quizá podría aportar valiosa informaci
 {\scriptsize\squarepar{\emph{La trascendencia de lo nimio. El humor como poética en los cuentos de Efrén Hernández} de José Julián González Osorno, se terminó de componer en calle Rayón núm.~25, col. Centro, Altotonga, Veracruz (México). El «manuscrito» se capturó con el editor de texto plano TeXmaker (5.0.3) de Pascal Brachet, y se formó en el sistema de preparación de documentos LaTeX de Leslie Lamport, basado en el lenguaje de programación TeX creado por Donald E. Knuth; el archivo fuente fue compilado con el motor de tipografías \textsc{pdf}TeX desarrollado por Hàn Th\'{ê} Thành. En su composición se utilizó tipografía Cochineal, \emph{fork} de Crimson Text de Sebastian Kosch realizado por Michael Sharpe. Las imágenes se manipularon en \textsc{gimp} (2.10.22) e Inkscape (1.0.2). Disposición tipográfica realizada para papel \emph{Bond} ahuesado tamaño carta de 90\,gr. Diseño, diagramación y composición tipográfica: \href{muxkernel@gmail.com}{Tuxkernel}. ver.\space\fileversion\space\filedate}}
 \protect\phantomsection
 \addcontentsline{toc}{chapter}{Colofón}
+% PÁGINA EN BLANCO
+\newpage
+\pagestyle{empty}
+\null\vfill
+% PÁGINA EN BLANCO
+\newpage
+\pagestyle{empty}
+\null\vfill
 \end{document}
